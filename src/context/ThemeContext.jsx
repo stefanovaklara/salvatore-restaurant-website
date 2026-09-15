@@ -3,26 +3,36 @@ import { createContext, useContext, useEffect, useState } from 'react'
 const ThemeContext = createContext()
 
 export function ThemeProvider({ children }) {
-    const [isDark, setIsDark] = useState(() => {
-        const hour = new Date().getHours()
-        return hour >= 18 || hour < 6
-    })
+  const [isDarkMode, setIsDarkMode] = useState(false)
 
-    useEffect(() => {
-        document.documentElement.classList.toggle('dark', isDark)
-    }, [isDark])
+  useEffect(() => {
+    const currentHour = new Date().getHours()
+    const isNightTime = currentHour >= 18 || currentHour < 6
 
-    const toggleTheme = () => {
-        setIsDark((prev) => !prev)
+    setIsDarkMode(isNightTime)
+  }, [])
+
+  useEffect(() => {
+    const root = document.documentElement
+
+    if (isDarkMode) {
+      root.classList.add('dark')
+    } else {
+      root.classList.remove('dark')
     }
+  }, [isDarkMode])
 
-    return (
-        <ThemeContext.Provider value={{ isDark, toggleTheme }}>
-            {children}
-        </ThemeContext.Provider>
-    )
+  const toggleTheme = () => {
+    setIsDarkMode((prev) => !prev)
+  }
+
+  return (
+    <ThemeContext.Provider value={{ isDarkMode, toggleTheme }}>
+      {children}
+    </ThemeContext.Provider>
+  )
 }
 
 export function useTheme() {
-    return useContext(ThemeContext)
+  return useContext(ThemeContext)
 }
