@@ -1,0 +1,86 @@
+export const translations = {
+    MK: {
+        home: 'Почетна',
+        menu: 'Мени',
+        story: 'Приказна',
+        reservations: 'Резервации',
+        contact: 'Контакт',
+        subtitle: 'Италијанска кујна • Скопје',
+        heroTitle: 'Salvatore',
+        heroDescription:
+            'Елегантно италијанско гастрономско искуство во срцето на Скопје, инспирирано од традицијата, страста и la dolce vita.',
+        reserve: 'Резервирај маса',
+        explore: 'Истражи го менито',
+        ourMenu: 'Нашето мени',
+        reservationTitle: 'Резервации',
+        location: 'Скопје, Северна Македонија',
+    },
+
+    EN: {
+        home: 'Home',
+        menu: 'Menu',
+        story: 'Story',
+        reservations: 'Reservations',
+        contact: 'Contact',
+        subtitle: 'Italian Cuisine • Skopje',
+        heroTitle: 'Salvatore',
+        heroDescription:
+            'An elegant Italian dining experience in the heart of Skopje, inspired by tradition, passion, and la dolce vita.',
+        reserve: 'Reserve a Table',
+        explore: 'Explore Menu',
+        ourMenu: 'Our Menu',
+        reservationTitle: 'Reservations',
+        location: 'Skopje, North Macedonia',
+    },
+
+    IT: {
+        home: 'Home',
+        menu: 'Menu',
+        story: 'La Storia',
+        reservations: 'Prenotazioni',
+        contact: 'Contatti',
+        subtitle: 'Cucina Italiana • Skopje',
+        heroTitle: 'Salvatore',
+        heroDescription:
+            'Un’elegante esperienza culinaria italiana nel cuore di Skopje, ispirata alla tradizione, alla passione e alla dolce vita.',
+        reserve: 'Prenota un Tavolo',
+        explore: 'Esplora il Menu',
+        ourMenu: 'Il Nostro Menu',
+        reservationTitle: 'Prenotazioni',
+        location: 'Skopje, Macedonia del Nord',
+    },
+
+    FR: {
+        home: 'Accueil',
+        menu: 'Menu',
+        story: 'Notre Histoire',
+        reservations: 'Réservations',
+        contact: 'Contact',
+        subtitle: 'Cuisine Italienne • Skopje',
+        heroTitle: 'Salvatore',
+        heroDescription:
+            'Une expérience gastronomique italienne élégante au cœur de Skopje, inspirée par la tradition, la passion et la dolce vita.',
+        reserve: 'Réserver une Table',
+        explore: 'Découvrir le Menu',
+        ourMenu: 'Notre Menu',
+        reservationTitle: 'Réservations',
+        location: 'Skopje, Macédoine du Nord',
+    },
+
+    DE: {
+        home: 'Startseite',
+        menu: 'Speisekarte',
+        story: 'Geschichte',
+        reservations: 'Reservierungen',
+        contact: 'Kontakt',
+        subtitle: 'Italienische Küche • Skopje',
+        heroTitle: 'Salvatore',
+        heroDescription:
+            'Ein elegantes italienisches Restauranterlebnis im Herzen von Skopje, inspiriert von Tradition, Leidenschaft und la dolce vita.',
+        reserve: 'Tisch reservieren',
+        explore: 'Menü entdecken',
+        ourMenu: 'Unsere Speisekarte',
+        reservationTitle: 'Reservierungen',
+        location: 'Skopje, Nordmazedonien',
+    },
+}

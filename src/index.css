@@ -1,1 +1,28 @@
 @import "tailwindcss";
+
+:root {
+    --color-salvatore-green: #0A1F1C;
+    --color-salvatore-gold: #D4AF37;
+    --color-salvatore-cream: #FDFBF7;
+}
+
+body {
+    margin: 0;
+    background-color: var(--color-salvatore-cream);
+    color: var(--color-salvatore-green);
+    font-family: Georgia, 'Times New Roman', serif;
+}
+.dark {
+    --color-salvatore-green: #FDFBF7;
+    --color-salvatore-gold: #D4AF37;
+    --color-salvatore-cream: #0A1F1C;
+}
+
+.dark body {
+    background-color: var(--color-salvatore-cream);
+    color: var(--color-salvatore-green);
+}
+
+html {
+    scroll-behavior: smooth;
+}
