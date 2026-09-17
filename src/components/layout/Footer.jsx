@@ -1,4 +1,3 @@
-import { Facebook, Instagram } from 'lucide-react'
 
 function Footer() {
   return (
@@ -21,22 +20,22 @@ function Footer() {
 
           {/* Social media */}
           <div className="mt-5 flex gap-4">
-            <a
-              href="#"
-              aria-label="Instagram"
-              className="transition hover:text-[var(--color-salvatore-gold)]"
-            >
-              <Instagram size={20} />
-            </a>
+  <a
+    href="#"
+    aria-label="Instagram"
+    className="text-sm font-semibold transition hover:text-[var(--color-salvatore-gold)]"
+  >
+    Instagram
+  </a>
 
-            <a
-              href="#"
-              aria-label="Facebook"
-              className="transition hover:text-[var(--color-salvatore-gold)]"
-            >
-              <Facebook size={20} />
-            </a>
-          </div>
+  <a
+    href="#"
+    aria-label="Facebook"
+    className="text-sm font-semibold transition hover:text-[var(--color-salvatore-gold)]"
+  >
+    Facebook
+  </a>
+</div>
         </div>
 
         {/* Contact */}
