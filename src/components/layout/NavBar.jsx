@@ -25,7 +25,7 @@ function Navbar() {
 
     return (
         <nav
-            className="fixed top-0 z-50 w-full border-b border-[var(--color-salvatore-gold)]/30 bg-[var(--color-salvatore-cream)]/95 backdrop-blur">
+             className="fixed top-0 z-50 w-full border-b border-black/10 bg-white">
             <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 
                 {/* Logo */}
@@ -155,7 +155,7 @@ function Navbar() {
                     </div>
                 </div>
             )}
-        </nav>
+        </>
     )
 }
 
