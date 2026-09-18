@@ -28,7 +28,7 @@ function MenuCard({ title, description, images, onClick }) {
         <button
             type="button"
             onClick={onClick}
-            className="group relative aspect-square w-full overflow-hidden text-left"
+            className="group relative aspect-square w-full cursor-pointer overflow-hidden text-left"
         >
             <img
                 src={image}
