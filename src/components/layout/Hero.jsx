@@ -1,13 +1,46 @@
 import { Volume2, VolumeX } from 'lucide-react'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useLanguage } from '../../context/LanguageContext'
 import { translations } from '../../data/translations'
 import coverImage from '../../assets/cover.webp'
+import ambientMusic from '../../assets/ambient.mp3'
+
 function Hero() {
     const { language } = useLanguage()
     const t = translations[language]
 
     const [isPlaying, setIsPlaying] = useState(false)
+    const audioRef = useRef(null)
+
+    useEffect(() => {
+        const audio = new Audio(ambientMusic)
+
+        audio.loop = true
+        audio.volume = 0.4
+
+        audioRef.current = audio
+
+        return () => {
+            audio.pause()
+            audio.currentTime = 0
+        }
+    }, [])
+
+    const toggleMusic = async () => {
+        if (!audioRef.current) return
+
+        if (isPlaying) {
+            audioRef.current.pause()
+            setIsPlaying(false)
+        } else {
+            try {
+                await audioRef.current.play()
+                setIsPlaying(true)
+            } catch (error) {
+                console.error('Could not play audio:', error)
+            }
+        }
+    }
 
     return (
         <section
@@ -55,12 +88,17 @@ function Hero() {
 
             <button
                 type="button"
-                onClick={() => setIsPlaying((prev) => !prev)}
-                className="absolute bottom-8 right-6 z-10 flex items-center gap-2 rounded-full border border-white/30 bg-black/30 px-4 py-2 text-xs text-white backdrop-blur-sm transition hover:border-[var(--color-salvatore-gold)] hover:text-[var(--color-salvatore-gold)]"
+                onClick={toggleMusic}
+                className="absolute bottom-8 right-6 z-10 flex cursor-pointer items-center gap-2 rounded-full border border-white/30 bg-black/30 px-4 py-2 text-xs text-white backdrop-blur-sm transition hover:border-[var(--color-salvatore-gold)] hover:text-[var(--color-salvatore-gold)]"
+                aria-label={isPlaying ? t.musicOn : t.musicOff}
             >
-                {isPlaying ? <Volume2 size={16} /> : <VolumeX size={16} />}
+                {isPlaying ? (
+                    <Volume2 size={16} />
+                ) : (
+                    <VolumeX size={16} />
+                )}
 
-                {isPlaying ? 'Амбиент: Вклучен' : 'Амбиент во Salvatore'}
+                {isPlaying ? t.musicOn : t.musicOff}
             </button>
         </section>
     )
