@@ -1,6 +1,7 @@
 import Footer from './components/layout/Footer'
 import Hero from './components/layout/Hero'
 import Navbar from './components/layout/Navbar'
+import UsefulInformation from './components/layout/UsefulInformation'
 import FoodMenuPage from './components/menu/FoodMenuPage'
 import DrinksMenuPage from './components/menu/DrinksMenuPage'
 import DigitalMenu from './components/menu/DigitalMenu'
@@ -52,6 +53,7 @@ function App() {
                 <Hero />
 
                 <DigitalMenu />
+                 <UsefulInformation />
 
                 <section
                     id="reservations"
