@@ -21,6 +21,9 @@ export const translations = {
 
         dayMode: 'Дневен режим',
         nightMode: 'Ноќен режим',
+
+        musicOn: 'Амбиент: Вклучен',
+        musicOff: 'Амбиент во Salvatore',
     },
 
     EN: {
@@ -45,6 +48,9 @@ export const translations = {
 
         dayMode: 'Day Mode',
         nightMode: 'Night Mode',
+
+        musicOn: 'Ambience: On',
+        musicOff: 'Salvatore Ambience',
     },
 
     IT: {
@@ -69,6 +75,9 @@ export const translations = {
 
         dayMode: 'Modalità giorno',
         nightMode: 'Modalità notte',
+
+        musicOn: 'Atmosfera: Attiva',
+        musicOff: 'Atmosfera di Salvatore',
     },
 
     FR: {
@@ -93,6 +102,9 @@ export const translations = {
 
         dayMode: 'Mode jour',
         nightMode: 'Mode nuit',
+
+        musicOn: 'Ambiance : Activée',
+        musicOff: 'Ambiance Salvatore',
     },
 
     DE: {
@@ -117,5 +129,8 @@ export const translations = {
 
         dayMode: 'Tagesmodus',
         nightMode: 'Nachtmodus',
+
+        musicOn: 'Ambiente: Ein',
+        musicOff: 'Salvatore Ambiente',
     },
 }
