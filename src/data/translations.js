@@ -1,136 +1,121 @@
 export const translations = {
-  MK: {
-    home: 'Почетна',
-    menu: 'Мени',
-    matchmaker: 'Сомелиер',
-    story: 'Приказна',
-    reservations: 'Резервации',
-    vouchers: 'Ваучери',
-    contact: 'Контакт',
+    MK: {
+        home: 'Почетна',
+        menu: 'Мени',
+        matchmaker: 'Matchmaker',
+        story: 'Приказна',
+        usefulInformation: 'Корисни информации',
+        vouchers: 'Ваучери',
+        contact: 'Контакт',
 
-    subtitle: 'Италијанска кујна • Скопје',
-    heroTitle: 'Salvatore',
-    heroDescription:
-      'Елегантно италијанско гастрономско искуство во срцето на Скопје, инспирирано од традицијата, страста и la dolce vita.',
+        ourMenu: 'Нашето мени',
+        reservationTitle: 'Резервации',
+        reserve: 'Резервирај',
+        reserveTable: 'Резервирај маса',
+        exploreMenu: 'Истражи го менито',
 
-    reserve: 'Резервирај',
-    reserveTable: 'Зачувај Маса',
-    explore: 'Истражи го менито',
-    exploreMenu: 'Погледни Мени',
+        heroTitle: 'Salvatore',
+        heroDescription:
+            'Елегантно италијанско гастрономско искуство во срцето на Скопје, инспирирано од традицијата, страста и La Dolce Vita.',
+        subtitle: 'Италијанска кујна • Скопје',
 
-    ourMenu: 'Нашето мени',
-    reservationTitle: 'Резервации',
-    location: 'Скопје, Северна Македонија',
+        dayMode: 'Дневен режим',
+        nightMode: 'Ноќен режим',
+    },
 
-    nightMode: 'Ноќен Амбиент',
-    dayMode: 'Дневен Амбиент',
-  },
+    EN: {
+        home: 'Home',
+        menu: 'Menu',
+        matchmaker: 'Matchmaker',
+        story: 'Story',
+        usefulInformation: 'Useful Information',
+        vouchers: 'Vouchers',
+        contact: 'Contact',
 
-  EN: {
-    home: 'Home',
-    menu: 'Menu',
-    matchmaker: 'Sommelier',
-    story: 'Story',
-    reservations: 'Reservations',
-    vouchers: 'Vouchers',
-    contact: 'Contact',
+        ourMenu: 'Our Menu',
+        reservationTitle: 'Reservations',
+        reserve: 'Reserve',
+        reserveTable: 'Reserve a Table',
+        exploreMenu: 'Explore Menu',
 
-    subtitle: 'Italian Cuisine • Skopje',
-    heroTitle: 'Salvatore',
-    heroDescription:
-      'An elegant Italian dining experience in the heart of Skopje, inspired by tradition, passion, and la dolce vita.',
+        heroTitle: 'Salvatore',
+        heroDescription:
+            'An elegant Italian gastronomic experience in the heart of Skopje, inspired by tradition, passion and La Dolce Vita.',
+        subtitle: 'Italian Cuisine • Skopje',
 
-    reserve: 'Reserve',
-    reserveTable: 'Reserve a Table',
-    explore: 'Explore Menu',
-    exploreMenu: 'Explore Menu',
+        dayMode: 'Day Mode',
+        nightMode: 'Night Mode',
+    },
 
-    ourMenu: 'Our Menu',
-    reservationTitle: 'Reservations',
-    location: 'Skopje, North Macedonia',
+    IT: {
+        home: 'Home',
+        menu: 'Menu',
+        matchmaker: 'Matchmaker',
+        story: 'La nostra storia',
+        usefulInformation: 'Informazioni utili',
+        vouchers: 'Buoni regalo',
+        contact: 'Contatti',
 
-    nightMode: 'Evening Mode',
-    dayMode: 'Day Mode',
-  },
+        ourMenu: 'Il nostro menu',
+        reservationTitle: 'Prenotazioni',
+        reserve: 'Prenota',
+        reserveTable: 'Prenota un tavolo',
+        exploreMenu: 'Esplora il menu',
 
-  IT: {
-    home: 'Home',
-    menu: 'Menu',
-    matchmaker: 'Sommelier',
-    story: 'La Storia',
-    reservations: 'Prenotazioni',
-    vouchers: 'Coupon',
-    contact: 'Contatti',
+        heroTitle: 'Salvatore',
+        heroDescription:
+            'Un’elegante esperienza gastronomica italiana nel cuore di Skopje, ispirata alla tradizione, alla passione e alla Dolce Vita.',
+        subtitle: 'Cucina Italiana • Skopje',
 
-    subtitle: 'Cucina Italiana • Skopje',
-    heroTitle: 'Salvatore',
-    heroDescription:
-      'Un’elegante esperienza culinaria italiana nel cuore di Skopje, ispirata alla tradizione, alla passione e alla dolce vita.',
+        dayMode: 'Modalità giorno',
+        nightMode: 'Modalità notte',
+    },
 
-    reserve: 'Prenota',
-    reserveTable: 'Prenota un Tavolo',
-    explore: 'Esplora il Menu',
-    exploreMenu: 'Scopri il Menu',
+    FR: {
+        home: 'Accueil',
+        menu: 'Menu',
+        matchmaker: 'Matchmaker',
+        story: 'Notre histoire',
+        usefulInformation: 'Informations utiles',
+        vouchers: 'Bons cadeaux',
+        contact: 'Contact',
 
-    ourMenu: 'Il Nostro Menu',
-    reservationTitle: 'Prenotazioni',
-    location: 'Skopje, Macedonia del Nord',
+        ourMenu: 'Notre menu',
+        reservationTitle: 'Réservations',
+        reserve: 'Réserver',
+        reserveTable: 'Réserver une table',
+        exploreMenu: 'Découvrir le menu',
 
-    nightMode: 'Modalità Sera',
-    dayMode: 'Modalità Giorno',
-  },
+        heroTitle: 'Salvatore',
+        heroDescription:
+            'Une élégante expérience gastronomique italienne au cœur de Skopje, inspirée par la tradition, la passion et la Dolce Vita.',
+        subtitle: 'Cuisine Italienne • Skopje',
 
-  FR: {
-    home: 'Accueil',
-    menu: 'Menu',
-    matchmaker: 'Sommelier',
-    story: 'Histoire',
-    reservations: 'Réservations',
-    vouchers: 'Cadeaux',
-    contact: 'Contact',
+        dayMode: 'Mode jour',
+        nightMode: 'Mode nuit',
+    },
 
-    subtitle: 'Cuisine Italienne • Skopje',
-    heroTitle: 'Salvatore',
-    heroDescription:
-      'Une expérience gastronomique italienne élégante au cœur de Skopje, inspirée par la tradition, la passion et la dolce vita.',
+    DE: {
+        home: 'Startseite',
+        menu: 'Speisekarte',
+        matchmaker: 'Matchmaker',
+        story: 'Unsere Geschichte',
+        usefulInformation: 'Nützliche Informationen',
+        vouchers: 'Gutscheine',
+        contact: 'Kontakt',
 
-    reserve: 'Réserver',
-    reserveTable: 'Réserver une Table',
-    explore: 'Découvrir le Menu',
-    exploreMenu: 'Consulter le Menu',
+        ourMenu: 'Unsere Speisekarte',
+        reservationTitle: 'Reservierungen',
+        reserve: 'Reservieren',
+        reserveTable: 'Tisch reservieren',
+        exploreMenu: 'Speisekarte entdecken',
 
-    ourMenu: 'Notre Menu',
-    reservationTitle: 'Réservations',
-    location: 'Skopje, Macédoine du Nord',
+        heroTitle: 'Salvatore',
+        heroDescription:
+            'Ein elegantes italienisches gastronomisches Erlebnis im Herzen von Skopje, inspiriert von Tradition, Leidenschaft und La Dolce Vita.',
+        subtitle: 'Italienische Küche • Skopje',
 
-    nightMode: 'Mode Soirée',
-    dayMode: 'Mode Jour',
-  },
-
-  DE: {
-    home: 'Startseite',
-    menu: 'Speisekarte',
-    matchmaker: 'Sommelier',
-    story: 'Geschichte',
-    reservations: 'Reservierungen',
-    vouchers: 'Gutscheine',
-    contact: 'Kontakt',
-
-    subtitle: 'Italienische Küche • Skopje',
-    heroTitle: 'Salvatore',
-    heroDescription:
-      'Ein elegantes italienisches Restauranterlebnis im Herzen von Skopje, inspiriert von Tradition, Leidenschaft und la dolce vita.',
-
-    reserve: 'Reservieren',
-    reserveTable: 'Tisch reservieren',
-    explore: 'Menü entdecken',
-    exploreMenu: 'Menü Ansehen',
-
-    ourMenu: 'Unsere Speisekarte',
-    reservationTitle: 'Reservierungen',
-    location: 'Skopje, Nordmazedonien',
-
-    nightMode: 'Abendmodus',
-    dayMode: 'Tagesmodus',
-  },
+        dayMode: 'Tagesmodus',
+        nightMode: 'Nachtmodus',
+    },
 }
