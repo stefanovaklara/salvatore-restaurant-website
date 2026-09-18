@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import { foodImages, drinkImages } from '../../data/menuImages'
+import { useLanguage } from '../../context/LanguageContext'
+import { translations } from '../../data/translations'
 
 function getRandomImage(images, previousImage = '') {
     if (!images.length) return ''
@@ -10,6 +12,9 @@ function getRandomImage(images, previousImage = '') {
 }
 
 function MenuCard({ title, description, images, onClick }) {
+    const { language } = useLanguage()
+    const t = translations[language]
+
     const [image, setImage] = useState(() => getRandomImage(images))
 
     useEffect(() => {
@@ -54,7 +59,7 @@ function MenuCard({ title, description, images, onClick }) {
                     </p>
 
                     <p className="mt-6 text-xs uppercase tracking-[0.3em] text-[var(--accent-gold)]">
-                        View menu
+                        {t.viewMenu}
                     </p>
 
                 </div>
@@ -64,6 +69,9 @@ function MenuCard({ title, description, images, onClick }) {
 }
 
 function DigitalMenu() {
+    const { language } = useLanguage()
+    const t = translations[language]
+
     const navigateTo = (path) => {
         window.history.pushState({}, '', path)
         window.dispatchEvent(new PopStateEvent('popstate'))
@@ -83,7 +91,7 @@ function DigitalMenu() {
                     </p>
 
                     <h2 className="mt-3 font-serif-luxury text-4xl text-[var(--color-salvatore-green)] md:text-5xl">
-                        Нашето мени
+                        {t.ourMenu}
                     </h2>
 
                 </div>
@@ -91,15 +99,15 @@ function DigitalMenu() {
                 <div className="grid gap-8 md:grid-cols-2">
 
                     <MenuCard
-                        title="Food"
-                        description="Discover our Italian cuisine and traditional dishes."
+                        title={t.food}
+                        description={t.foodDescription}
                         images={foodImages}
                         onClick={() => navigateTo('/food')}
                     />
 
                     <MenuCard
-                        title="Drinks"
-                        description="Explore our selection of wines, cocktails and spirits."
+                        title={t.drinks}
+                        description={t.drinksDescription}
                         images={drinkImages}
                         onClick={() => navigateTo('/drinks')}
                     />

@@ -17,7 +17,7 @@ function Navbar() {
         { label: t.home, href: '/' },
         { label: t.menu, href: '/#menu' },
         { label: t.matchmaker, href: '/#matchmaker' },
-        {label: 'Корисни информации', href: '/#useful-information',},
+        { label: t.usefulInformation, href: '/#useful-information' },
         { label: t.vouchers, href: '/#vouchers' },
         { label: t.contact, href: '/#contact' },
     ]

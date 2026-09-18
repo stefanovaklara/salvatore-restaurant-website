@@ -1,5 +1,8 @@
-
+import { useLanguage } from '../../context/LanguageContext'
+import { translations } from '../../data/translations'
 function Footer() {
+  const { language } = useLanguage()
+  const t = translations[language]
   return (
     <footer
       id="contact"
@@ -14,8 +17,7 @@ function Footer() {
           </h2>
 
           <p className="mt-3 max-w-sm text-sm leading-6 text-[var(--color-salvatore-cream)]/70">
-            Скопје, Северна Македонија. Вистинско италијанско искуство со
-            фокус на квалитетни состојки и незаборавен амбиент.
+            {t.footerDescription}
           </p>
 
           {/* Social media */}
@@ -41,11 +43,11 @@ function Footer() {
         {/* Contact */}
         <div>
           <h3 className="font-semibold text-[var(--color-salvatore-gold)]">
-            Contact
+            {t.footercontact}
           </h3>
 
           <p className="mt-3 text-sm text-[var(--color-salvatore-cream)]/70">
-            Скопје, Северна Македонија
+            {t.footerLocation}
           </p>
 
           <p className="mt-2 text-sm text-[var(--color-salvatore-cream)]/70">
@@ -56,11 +58,11 @@ function Footer() {
         {/* Opening hours */}
         <div>
           <h3 className="font-semibold text-[var(--color-salvatore-gold)]">
-            Opening Hours
+            {t.footerOpeningHours}
           </h3>
 
           <p className="mt-3 text-sm text-[var(--color-salvatore-cream)]/70">
-            Monday – Sunday
+            {t.footerDays}
           </p>
 
           <p className="mt-2 text-sm text-[var(--color-salvatore-cream)]/70">
@@ -71,7 +73,7 @@ function Footer() {
 
       {/* Copyright */}
       <div className="mx-auto mt-10 max-w-7xl border-t border-[var(--color-salvatore-cream)]/10 pt-6 text-center text-xs text-[var(--color-salvatore-cream)]/50">
-        © {new Date().getFullYear()} Salvatore. Сите права се задржани.
+        © {new Date().getFullYear()} Salvatore. {t.footerRights}.
       </div>
     </footer>
   )

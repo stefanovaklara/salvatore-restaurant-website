@@ -58,7 +58,7 @@ function Hero() {
 
             <div className="relative z-10 mx-auto max-w-4xl text-center">
                 <span className="mb-6 block text-xs uppercase tracking-[0.4em] text-[var(--color-salvatore-gold)]">
-                    Fine Italian Dining • Skopje
+                    {t.FineItalianDining}
                 </span>
 
                 <h1 className="font-serif-luxury text-5xl font-bold tracking-wide sm:text-6xl md:text-8xl">
