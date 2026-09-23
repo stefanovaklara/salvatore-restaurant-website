@@ -1,3 +1,8 @@
+import Reservation from "./components/booking/Reservation";
+import SecretClub from "./components/booking/SecretClub";
+import GiftCard from "./components/booking/GiftCard";
+import Location from "./components/booking/Location";
+
 import Footer from './components/layout/Footer'
 import Hero from './components/layout/Hero'
 import Navbar from './components/layout/Navbar'
@@ -20,7 +25,9 @@ function App() {
 
         window.addEventListener('popstate', handlePopState)
 
-        return () => {
+        return (
+
+        ) => {
             window.removeEventListener('popstate', handlePopState)
         }
     }, [])
@@ -53,16 +60,16 @@ function App() {
                 <Hero />
 
                 <DigitalMenu />
-                 <UsefulInformation />
 
-                <section
-                    id="reservations"
-                    className="flex min-h-[40vh] items-center justify-center bg-[var(--color-salvatore-green)] px-6"
-                >
-                    <h2 className="font-serif-luxury text-4xl text-[var(--color-salvatore-gold)]">
-                        {translations[language].reservationTitle}
-                    </h2>
-                </section>
+                <UsefulInformation />
+
+                <Reservation />
+
+                <SecretClub />
+
+                <GiftCard />
+
+                <Location />
             </main>
 
             <Footer />
