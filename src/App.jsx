@@ -10,12 +10,9 @@ import UsefulInformation from './components/layout/UsefulInformation'
 import FoodMenuPage from './components/menu/FoodMenuPage'
 import DrinksMenuPage from './components/menu/DrinksMenuPage'
 import DigitalMenu from './components/menu/DigitalMenu'
-import { useLanguage } from './context/LanguageContext'
-import { translations } from './data/translations'
 import { useEffect, useState } from 'react'
 
 function App() {
-    const { language } = useLanguage()
     const [path, setPath] = useState(window.location.pathname)
 
     useEffect(() => {
@@ -25,9 +22,7 @@ function App() {
 
         window.addEventListener('popstate', handlePopState)
 
-        return (
-
-        ) => {
+        return () => {
             window.removeEventListener('popstate', handlePopState)
         }
     }, [])
