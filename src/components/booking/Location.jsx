@@ -20,11 +20,11 @@ function Location() {
 
                         <div className="space-y-4 text-gray-300">
                             <p>
-                                📍 Skopje, North Macedonia
+                                 Skopje, North Macedonia
                             </p>
 
                             <p>
-                                📞 +389 2 000 000
+                                070248248
                             </p>
 
                             <p>
@@ -44,7 +44,7 @@ function Location() {
 
                     <div className="flex min-h-[300px] items-center justify-center rounded-2xl bg-[#163a34] p-8 text-center">
                         <div>
-                            <p className="mb-4 text-5xl">📍</p>
+                            <p className="mb-4 text-5xl"></p>
 
                             <h3 className="mb-3 text-xl font-serif">
                                 Visit Salvatore
@@ -55,7 +55,7 @@ function Location() {
                             </p>
 
                             <a
-                                href="https://www.google.com/maps"
+                                href="https://www.google.com/maps/place/Salvatore+Italian+Restaurant/@41.9837484,21.4223475,17z/data=!3m1!4b1!4m6!3m5!1s0x135415b1ff1496e7:0x27bd810dac891cdd!8m2!3d41.9837484!4d21.4223475!16s%2Fg%2F11y5b42l70?entry=ttu&g_ep=EgoyMDI2MDkyMi4wIKXMDSoASAFQAw%3D%3D"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="inline-block rounded-lg bg-[#D4AF37] px-6 py-3 font-medium text-[#0A1F1C]"
