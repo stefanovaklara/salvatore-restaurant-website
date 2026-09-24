@@ -13,35 +13,37 @@ function Location() {
                 </div>
 
                 <div className="grid gap-8 md:grid-cols-2">
-                    <div className="rounded-2xl border border-white/10 p-8">
+                    <div className="text-center">
                         <h3 className="mb-5 text-2xl font-serif text-[#D4AF37]">
                             Salvatore Skopje
                         </h3>
-
                         <div className="space-y-4 text-gray-300">
                             <p>
-                                 Skopje, North Macedonia
+                                Skopje, North Macedonia
                             </p>
 
                             <p>
-                                070248248
+                                Contact: +389 70 248 248
                             </p>
 
                             <p>
-                                ✉️ info@salvatore.mk
+                                Email: info@salvatore.mk
                             </p>
 
-                            <div>
+                            <div className="pt-2">
                                 <p className="font-medium text-white">
-                                    Opening hours
+                                    Opening Hours
                                 </p>
 
-                                <p>Monday – Sunday</p>
-                                <p>12:00 – 00:00</p>
+                                <p className="mt-2 text-sm leading-7 text-[var(--color-salvatore-cream)]/70">
+                                    Monday – Thursday: 12:00 – 00:00<br />
+                                    Friday, Saturday & Public Holidays: 12:00 – 01:00<br />
+                                    Sunday: 12:00 – 00:00
+                                </p>
                             </div>
                         </div>
-                    </div>
 
+                    </div>
                     <div className="flex min-h-[300px] items-center justify-center rounded-2xl bg-[#163a34] p-8 text-center">
                         <div>
                             <p className="mb-4 text-5xl"></p>
