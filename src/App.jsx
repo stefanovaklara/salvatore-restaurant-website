@@ -1,15 +1,18 @@
-import Reservation from "./components/booking/Reservation";
-import SecretClub from "./components/booking/SecretClub";
-import GiftCard from "./components/booking/GiftCard";
-import Location from "./components/booking/Location";
+import Reservation from './components/booking/Reservation'
+import SecretClub from './components/booking/SecretClub'
+import GiftCard from './components/booking/GiftCard'
+import Location from './components/booking/Location'
 
 import Footer from './components/layout/Footer'
 import Hero from './components/layout/Hero'
-import Navbar from './components/layout/Navbar'
+import NavBar from './components/layout/NavBar'
 import UsefulInformation from './components/layout/UsefulInformation'
+
+import Esperienza from './components/layout/Esperienza'
 import FoodMenuPage from './components/menu/FoodMenuPage'
 import DrinksMenuPage from './components/menu/DrinksMenuPage'
 import DigitalMenu from './components/menu/DigitalMenu'
+
 import { useEffect, useState } from 'react'
 
 function App() {
@@ -23,14 +26,17 @@ function App() {
         window.addEventListener('popstate', handlePopState)
 
         return () => {
-            window.removeEventListener('popstate', handlePopState)
+            window.removeEventListener(
+                'popstate',
+                handlePopState
+            )
         }
     }, [])
 
     if (path === '/food') {
         return (
             <>
-                <Navbar />
+            <NavBar />
                 <FoodMenuPage />
                 <Footer />
             </>
@@ -40,7 +46,7 @@ function App() {
     if (path === '/drinks') {
         return (
             <>
-                <Navbar />
+            <NavBar />
                 <DrinksMenuPage />
                 <Footer />
             </>
@@ -49,12 +55,14 @@ function App() {
 
     return (
         <>
-            <Navbar />
+            <NavBar />
 
             <main>
                 <Hero />
 
                 <DigitalMenu />
+
+                <Esperienza />
 
                 <UsefulInformation />
 
