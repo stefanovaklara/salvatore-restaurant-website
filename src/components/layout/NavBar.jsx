@@ -16,8 +16,11 @@ function Navbar() {
     const navItems = [
         { label: t.home, href: '/' },
         { label: t.menu, href: '/#menu' },
-        { label: t.matchmaker, href: '/#matchmaker' },
-        { label: t.usefulInformation, href: '/#useful-information' },
+       { label: t.experience, href: '/#esperienza' },
+        {
+            label: t.usefulInformation,
+            href: '/#useful-information',
+        },
         { label: t.vouchers, href: '/#vouchers' },
         { label: t.contact, href: '/#contact' },
     ]
@@ -49,6 +52,7 @@ function Navbar() {
                         <a
                             key={item.href}
                             href={item.href}
+                            onClick={handleNavigation}
                             className="text-sm font-medium text-white transition hover:text-[#D4AF37]"
                         >
                             {item.label}
@@ -63,7 +67,9 @@ function Navbar() {
 
                         <select
                             value={language}
-                            onChange={(e) => changeLanguage(e.target.value)}
+                            onChange={(e) =>
+                                changeLanguage(e.target.value)
+                            }
                             className="cursor-pointer bg-black text-sm font-medium text-white outline-none"
                         >
                             {languages.map((lang) => (
@@ -81,7 +87,11 @@ function Navbar() {
                     <button
                         type="button"
                         onClick={toggleTheme}
-                        title={isDarkMode ? t.dayMode : t.nightMode}
+                        title={
+                            isDarkMode
+                                ? t.dayMode
+                                : t.nightMode
+                        }
                         className="cursor-pointer rounded-full p-2 text-white transition hover:text-[#D4AF37]"
                     >
                         {isDarkMode ? (
@@ -105,7 +115,11 @@ function Navbar() {
                     className="cursor-pointer text-white transition hover:text-[#D4AF37] md:hidden"
                     aria-label="Toggle menu"
                 >
-                    {isOpen ? <X size={28} /> : <Menu size={28} />}
+                    {isOpen ? (
+                        <X size={28} />
+                    ) : (
+                        <Menu size={28} />
+                    )}
                 </button>
             </div>
 
@@ -142,7 +156,9 @@ function Navbar() {
                                 <button
                                     key={lang}
                                     type="button"
-                                    onClick={() => changeLanguage(lang)}
+                                    onClick={() =>
+                                        changeLanguage(lang)
+                                    }
                                     className={`cursor-pointer text-sm font-medium transition ${
                                         language === lang
                                             ? 'text-[#D4AF37]'
@@ -165,7 +181,9 @@ function Navbar() {
                                 <Moon size={18} />
                             )}
 
-                            {isDarkMode ? t.dayMode : t.nightMode}
+                            {isDarkMode
+                                ? t.dayMode
+                                : t.nightMode}
                         </button>
 
                     </div>
