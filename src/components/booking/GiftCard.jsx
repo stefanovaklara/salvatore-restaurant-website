@@ -13,7 +13,10 @@ function GiftCard() {
     }
 
     return (
-        <section id="gift-card" className="bg-[#FDFBF7] px-6 py-16">
+        <section
+            id="vouchers"
+            className="scroll-mt-20 bg-[#FDFBF7] px-6 py-16"
+        >
             <div className="mx-auto max-w-3xl text-center">
                 <p className="mb-2 text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
                     {t.perfectGift}

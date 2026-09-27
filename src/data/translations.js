@@ -3,6 +3,24 @@ export const translations = {
         home: 'Почетна',
         menu: 'Мени',
         matchmaker: 'Matchmaker',
+        experienceTitle: 'Salvatore Matchmaker',
+        experienceDescription:
+            'Одговорете на неколку прашања и откријте ја вашата идеална Salvatore комбинација.',
+        experienceStart: 'Започни',
+        experienceQuestion: 'Прашање',
+        experienceOf: 'од',
+        experienceRecommendation: 'Вашата Salvatore препорака',
+        experienceYourProfile: 'Вашиот профил',
+        experienceAperitivo: 'Аперитиво',
+        experienceStarter: 'Предјадење',
+        experienceMain: 'Главно јадење',
+        experienceDrinks: 'Пијалаци',
+        experienceDessert: 'Десерт',
+        experienceCigar: 'Пура',
+        experienceSaved: 'Зачувано',
+        experienceSave: 'Зачувај препорака',
+        experienceRestart: 'Нова препорака',
+        den: 'ден.',
         story: 'Приказна',
         usefulInformation: 'Корисни информации',
         vouchers: 'Ваучери',
@@ -53,6 +71,7 @@ export const translations = {
 
         musicOn: 'Амбиент: Вклучен',
         musicOff: 'Амбиент во Salvatore',
+
         footerDescription:
             'Скопје, Северна Македонија. Вистинско италијанско искуство со фокус на квалитетни состојки и незаборавен амбиент.',
         footerContact: 'Контакт',
@@ -60,7 +79,8 @@ export const translations = {
         footerDays: 'Понеделник – Недела',
         footerRights: 'Сите права се задржани',
         footerLocation: 'Скопје, Република Македонија',
-        FineItalianDining:'Италијанска кујна • Скопје',
+        FineItalianDining: 'Италијанска кујна • Скопје',
+
         reservationSection: 'Резервирајте маса',
         reservationDescription:
             'Резервирајте ја вашата маса и уживајте во автентично италијанско искуство.',
@@ -100,16 +120,33 @@ export const translations = {
     EN: {
         home: 'Home',
         menu: 'Menu',
+        matchmaker: 'Matchmaker',
+        experienceTitle: 'Salvatore Matchmaker',
+        experienceDescription:
+            'Answer a few questions and discover your ideal Salvatore combination.',
+        experienceStart: 'Start',
+        experienceQuestion: 'Question',
+        experienceOf: 'of',
+        experienceRecommendation: 'Your Salvatore Recommendation',
+        experienceYourProfile: 'Your Profile',
+        experienceAperitivo: 'Aperitivo',
+        experienceStarter: 'Starter',
+        experienceMain: 'Main Course',
+        experienceDrinks: 'Drinks',
+        experienceDessert: 'Dessert',
+        experienceCigar: 'Cigar',
+        experienceSaved: 'Saved',
+        experienceSave: 'Save Recommendation',
+        experienceRestart: 'New Recommendation',
+        den: 'den.',
         food: 'Food',
         drinks: 'Drinks',
-        matchmaker: 'Matchmaker',
         story: 'Story',
         usefulInformation: 'Useful Information',
         vouchers: 'Vouchers',
         contact: 'Contact',
 
         ourMenu: 'Our Menu',
-
         viewMenu: 'View Menu',
 
         ourFoodMenu: 'Our Cuisine',
@@ -151,14 +188,16 @@ export const translations = {
 
         musicOn: 'Ambience: On',
         musicOff: 'Salvatore Ambience',
+
         footerDescription:
             'Skopje, Republic of Macedonia. A true Italian experience focused on quality ingredients and an unforgettable ambience.',
         footerContact: 'Contact',
         footerOpeningHours: 'Opening Hours',
         footerDays: 'Monday – Sunday',
         footerRights: 'All rights reserved',
-        footerLocation:'Skopje, Republic of Macedonia',
-        FineItalianDining:'Fine Italian Dining • Skopje',
+        footerLocation: 'Skopje, Republic of Macedonia',
+        FineItalianDining: 'Fine Italian Dining • Skopje',
+
         reservationSection: 'Make a Reservation',
         reservationDescription:
             'Reserve your table and enjoy an authentic Italian experience.',
@@ -168,7 +207,7 @@ export const translations = {
         guests: 'guests',
         date: 'Date',
         time: 'Time',
-
+        reservationHeading: 'Make a Reservation',
 
         exclusiveExperience: 'Exclusive Experience',
         secretClubTitle: 'Salvatore Secret Club',
@@ -189,7 +228,8 @@ export const translations = {
         email: 'Email',
         openingHours: 'Opening Hours',
         mondayThursday: 'Monday – Thursday: 12:00 – 00:00',
-        fridaySaturdayHolidays: 'Friday, Saturday & Public Holidays: 12:00 – 01:00',
+        fridaySaturdayHolidays:
+            'Friday, Saturday & Public Holidays: 12:00 – 01:00',
         sunday: 'Sunday: 12:00 – 00:00',
         visitSalvatore: 'Visit Salvatore',
         visitDescription: 'Find us in the heart of Skopje.',
@@ -199,15 +239,32 @@ export const translations = {
         home: 'Home',
         menu: 'Menu',
         matchmaker: 'Matchmaker',
+        experienceTitle: 'Salvatore Matchmaker',
+        experienceDescription:
+            'Rispondi a qualche domanda e scopri la tua combinazione ideale da Salvatore.',
+        experienceStart: 'Inizia',
+        experienceQuestion: 'Domanda',
+        experienceOf: 'di',
+        experienceRecommendation: 'La tua raccomandazione Salvatore',
+        experienceYourProfile: 'Il tuo profilo',
+        experienceAperitivo: 'Aperitivo',
+        experienceStarter: 'Antipasto',
+        experienceMain: 'Piatto principale',
+        experienceDrinks: 'Bevande',
+        experienceDessert: 'Dessert',
+        experienceCigar: 'Sigaro',
+        experienceSaved: 'Salvato',
+        experienceSave: 'Salva raccomandazione',
+        experienceRestart: 'Nuova raccomandazione',
+        den: 'den.',
+        food: 'Cibo',
+        drinks: 'Bevande',
         story: 'La nostra storia',
         usefulInformation: 'Informazioni utili',
         vouchers: 'Buoni regalo',
         contact: 'Contatti',
 
         ourMenu: 'Il nostro menu',
-        food: 'Cibo',
-        drinks: 'Bevande',
-
         viewMenu: 'Visualizza il menu',
 
         ourFoodMenu: 'La nostra cucina',
@@ -249,6 +306,7 @@ export const translations = {
 
         musicOn: 'Atmosfera: Attiva',
         musicOff: 'Atmosfera di Salvatore',
+
         footerDescription:
             'Skopje, Repubblica di Macedonia. Una vera esperienza italiana incentrata su ingredienti di qualità e un’atmosfera indimenticabile.',
         footerContact: 'Contatti',
@@ -256,7 +314,8 @@ export const translations = {
         footerDays: 'Lunedì – Domenica',
         footerRights: 'Tutti i diritti riservati',
         footerLocation: 'Skopje, Repubblica di Macedonia',
-        FineItalianDining:'Alta cucina italiana • Skopje',
+        FineItalianDining: 'Alta cucina italiana • Skopje',
+
         reservationSection: 'Prenota un tavolo',
         reservationDescription:
             'Prenota il tuo tavolo e vivi un’autentica esperienza italiana.',
@@ -266,7 +325,7 @@ export const translations = {
         guests: 'ospiti',
         date: 'Data',
         time: 'Ora',
-
+        reservationHeading: 'Prenota un tavolo',
 
         exclusiveExperience: 'Esperienza esclusiva',
         secretClubTitle: 'Salvatore Secret Club',
@@ -287,7 +346,8 @@ export const translations = {
         email: 'Email',
         openingHours: 'Orari di apertura',
         mondayThursday: 'Lunedì – Giovedì: 12:00 – 00:00',
-        fridaySaturdayHolidays: 'Venerdì, Sabato e festivi: 12:00 – 01:00',
+        fridaySaturdayHolidays:
+            'Venerdì, Sabato e festivi: 12:00 – 01:00',
         sunday: 'Domenica: 12:00 – 00:00',
         visitSalvatore: 'Visita Salvatore',
         visitDescription: 'Ci trovi nel cuore di Skopje.',
@@ -297,15 +357,32 @@ export const translations = {
         home: 'Accueil',
         menu: 'Menu',
         matchmaker: 'Matchmaker',
+        experienceTitle: 'Salvatore Matchmaker',
+        experienceDescription:
+            'Répondez à quelques questions et découvrez votre combinaison idéale chez Salvatore.',
+        experienceStart: 'Commencer',
+        experienceQuestion: 'Question',
+        experienceOf: 'sur',
+        experienceRecommendation: 'Votre recommandation Salvatore',
+        experienceYourProfile: 'Votre profil',
+        experienceAperitivo: 'Apéritif',
+        experienceStarter: 'Entrée',
+        experienceMain: 'Plat principal',
+        experienceDrinks: 'Boissons',
+        experienceDessert: 'Dessert',
+        experienceCigar: 'Cigare',
+        experienceSaved: 'Enregistré',
+        experienceSave: 'Enregistrer la recommandation',
+        experienceRestart: 'Nouvelle recommandation',
+        den: 'den.',
+        food: 'Nourriture',
+        drinks: 'Boissons',
         story: 'Notre histoire',
         usefulInformation: 'Informations utiles',
         vouchers: 'Bons cadeaux',
         contact: 'Contact',
 
         ourMenu: 'Notre menu',
-        food: 'Nourriture',
-        drinks: 'Boissons',
-
         viewMenu: 'Voir le menu',
 
         ourFoodMenu: 'Notre cuisine',
@@ -347,6 +424,7 @@ export const translations = {
 
         musicOn: 'Ambiance : Activée',
         musicOff: 'Ambiance Salvatore',
+
         footerDescription:
             'Skopje, République de Macédoine. Une véritable expérience italienne axée sur des ingrédients de qualité et une ambiance inoubliable.',
         footerContact: 'Contact',
@@ -354,7 +432,8 @@ export const translations = {
         footerDays: 'Lundi – Dimanche',
         footerRights: 'Tous droits réservés',
         footerLocation: 'Skopje, République de Macédoine',
-        FineItalianDining:'Gastronomie italienne raffinée • Skopje',
+        FineItalianDining: 'Gastronomie italienne raffinée • Skopje',
+
         reservationSection: 'Réserver une table',
         reservationDescription:
             'Réservez votre table et profitez d’une expérience italienne authentique.',
@@ -364,7 +443,7 @@ export const translations = {
         guests: 'personnes',
         date: 'Date',
         time: 'Heure',
-
+        reservationHeading: 'Réserver une table',
 
         exclusiveExperience: 'Expérience exclusive',
         secretClubTitle: 'Salvatore Secret Club',
@@ -385,7 +464,8 @@ export const translations = {
         email: 'E-mail',
         openingHours: 'Heures d’ouverture',
         mondayThursday: 'Lundi – Jeudi : 12:00 – 00:00',
-        fridaySaturdayHolidays: 'Vendredi, Samedi et jours fériés : 12:00 – 01:00',
+        fridaySaturdayHolidays:
+            'Vendredi, Samedi et jours fériés : 12:00 – 01:00',
         sunday: 'Dimanche : 12:00 – 00:00',
         visitSalvatore: 'Visitez Salvatore',
         visitDescription: 'Retrouvez-nous au cœur de Skopje.',
@@ -395,15 +475,32 @@ export const translations = {
         home: 'Startseite',
         menu: 'Speisekarte',
         matchmaker: 'Matchmaker',
+        experienceTitle: 'Salvatore Matchmaker',
+        experienceDescription:
+            'Beantworten Sie einige Fragen und entdecken Sie Ihre ideale Kombination bei Salvatore.',
+        experienceStart: 'Starten',
+        experienceQuestion: 'Frage',
+        experienceOf: 'von',
+        experienceRecommendation: 'Ihre Salvatore-Empfehlung',
+        experienceYourProfile: 'Ihr Profil',
+        experienceAperitivo: 'Aperitif',
+        experienceStarter: 'Vorspeise',
+        experienceMain: 'Hauptgericht',
+        experienceDrinks: 'Getränke',
+        experienceDessert: 'Dessert',
+        experienceCigar: 'Zigarre',
+        experienceSaved: 'Gespeichert',
+        experienceSave: 'Empfehlung speichern',
+        experienceRestart: 'Neue Empfehlung',
+        den: 'den.',
+        food: 'Essen',
+        drinks: 'Getränke',
         story: 'Unsere Geschichte',
         usefulInformation: 'Nützliche Informationen',
         vouchers: 'Gutscheine',
         contact: 'Kontakt',
 
         ourMenu: 'Unsere Speisekarte',
-        food: 'Essen',
-        drinks: 'Getränke',
-
         viewMenu: 'Menü ansehen',
 
         ourFoodMenu: 'Unsere Küche',
@@ -445,6 +542,7 @@ export const translations = {
 
         musicOn: 'Ambiente: Ein',
         musicOff: 'Salvatore Ambiente',
+
         footerDescription:
             'Skopje, Republik Mazedonien. Ein echtes italienisches Erlebnis mit Fokus auf hochwertige Zutaten und ein unvergessliches Ambiente.',
         footerContact: 'Kontakt',
@@ -452,7 +550,8 @@ export const translations = {
         footerDays: 'Montag – Sonntag',
         footerRights: 'Alle Rechte vorbehalten',
         footerLocation: 'Skopje, Republik Mazedonien',
-        FineItalianDining:'Feine italienische Küche • Skopje',
+        FineItalianDining: 'Feine italienische Küche • Skopje',
+
         reservationSection: 'Tisch reservieren',
         reservationDescription:
             'Reservieren Sie Ihren Tisch und genießen Sie ein authentisches italienisches Erlebnis.',
@@ -462,7 +561,7 @@ export const translations = {
         guests: 'Gäste',
         date: 'Datum',
         time: 'Uhrzeit',
-
+        reservationHeading: 'Tisch reservieren',
 
         exclusiveExperience: 'Exklusives Erlebnis',
         secretClubTitle: 'Salvatore Secret Club',
@@ -483,7 +582,8 @@ export const translations = {
         email: 'E-Mail',
         openingHours: 'Öffnungszeiten',
         mondayThursday: 'Montag – Donnerstag: 12:00 – 00:00',
-        fridaySaturdayHolidays: 'Freitag, Samstag & Feiertage: 12:00 – 01:00',
+        fridaySaturdayHolidays:
+            'Freitag, Samstag & Feiertage: 12:00 – 01:00',
         sunday: 'Sonntag: 12:00 – 00:00',
         visitSalvatore: 'Salvatore besuchen',
         visitDescription: 'Sie finden uns im Herzen von Skopje.',
