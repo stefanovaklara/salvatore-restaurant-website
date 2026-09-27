@@ -61,6 +61,40 @@ export const translations = {
         footerRights: 'Сите права се задржани',
         footerLocation: 'Скопје, Република Македонија',
         FineItalianDining:'Италијанска кујна • Скопје',
+        reservationSection: 'Резервирајте маса',
+        reservationDescription:
+            'Резервирајте ја вашата маса и уживајте во автентично италијанско искуство.',
+        name: 'Име',
+        numberOfGuests: 'Број на гости',
+        guest: 'гостин',
+        guests: 'гости',
+        date: 'Датум',
+        time: 'Време',
+        reservationHeading: 'Резервација на маса',
+
+        exclusiveExperience: 'Ексклузивно искуство',
+        secretClubTitle: 'Salvatore Secret Club',
+        secretClubDescription:
+            'Станете дел од нашата приватна заедница и откријте ексклузивни настани, специјални вечери, вински искуства и изненадувања создадени за нашите членови.',
+        joinSecretClub: 'Приклучи се во Secret Club',
+
+        perfectGift: 'Совршен подарок',
+        giftCardTitle: 'Salvatore Gift Card',
+        giftCardDescription:
+            'Подарете некому посебно незаборавно италијанско гастрономско искуство во Salvatore Skopje.',
+        chooseAmount: 'Изберете износ',
+        purchaseGiftCard: 'Купи Gift Card',
+
+        findUs: 'Најдете нè',
+        locationContact: 'Локација и контакт',
+        location: 'Скопје, Северна Македонија',
+        email: 'Е-пошта',
+        openingHours: 'Работно време',
+        mondayThursday: 'Понеделник – Четврток: 12:00 – 00:00',
+        fridaySaturdayHolidays: 'Петок, Сабота и празници: 12:00 – 01:00',
+        sunday: 'Недела: 12:00 – 00:00',
+        visitSalvatore: 'Посетете го Salvatore',
+        visitDescription: 'Најдете нè во срцето на Скопје.',
     },
 
     EN: {
@@ -125,6 +159,40 @@ export const translations = {
         footerRights: 'All rights reserved',
         footerLocation:'Skopje, Republic of Macedonia',
         FineItalianDining:'Fine Italian Dining • Skopje',
+        reservationSection: 'Make a Reservation',
+        reservationDescription:
+            'Reserve your table and enjoy an authentic Italian experience.',
+        name: 'Name',
+        numberOfGuests: 'Number of guests',
+        guest: 'guest',
+        guests: 'guests',
+        date: 'Date',
+        time: 'Time',
+
+
+        exclusiveExperience: 'Exclusive Experience',
+        secretClubTitle: 'Salvatore Secret Club',
+        secretClubDescription:
+            'Become part of our private community and discover exclusive events, special dinners, wine experiences and surprises created for our members.',
+        joinSecretClub: 'Join the Secret Club',
+
+        perfectGift: 'The Perfect Gift',
+        giftCardTitle: 'Salvatore Gift Card',
+        giftCardDescription:
+            'Give someone special an unforgettable Italian dining experience at Salvatore Skopje.',
+        chooseAmount: 'Choose amount',
+        purchaseGiftCard: 'Purchase Gift Card',
+
+        findUs: 'Find Us',
+        locationContact: 'Location & Contact',
+        location: 'Skopje, North Macedonia',
+        email: 'Email',
+        openingHours: 'Opening Hours',
+        mondayThursday: 'Monday – Thursday: 12:00 – 00:00',
+        fridaySaturdayHolidays: 'Friday, Saturday & Public Holidays: 12:00 – 01:00',
+        sunday: 'Sunday: 12:00 – 00:00',
+        visitSalvatore: 'Visit Salvatore',
+        visitDescription: 'Find us in the heart of Skopje.',
     },
 
     IT: {
@@ -189,6 +257,40 @@ export const translations = {
         footerRights: 'Tutti i diritti riservati',
         footerLocation: 'Skopje, Repubblica di Macedonia',
         FineItalianDining:'Alta cucina italiana • Skopje',
+        reservationSection: 'Prenota un tavolo',
+        reservationDescription:
+            'Prenota il tuo tavolo e vivi un’autentica esperienza italiana.',
+        name: 'Nome',
+        numberOfGuests: 'Numero di ospiti',
+        guest: 'ospite',
+        guests: 'ospiti',
+        date: 'Data',
+        time: 'Ora',
+
+
+        exclusiveExperience: 'Esperienza esclusiva',
+        secretClubTitle: 'Salvatore Secret Club',
+        secretClubDescription:
+            'Entra a far parte della nostra comunità privata e scopri eventi esclusivi, cene speciali, esperienze enologiche e sorprese create per i nostri membri.',
+        joinSecretClub: 'Unisciti al Secret Club',
+
+        perfectGift: 'Il regalo perfetto',
+        giftCardTitle: 'Salvatore Gift Card',
+        giftCardDescription:
+            'Regala a qualcuno di speciale un’indimenticabile esperienza gastronomica italiana da Salvatore Skopje.',
+        chooseAmount: 'Scegli l’importo',
+        purchaseGiftCard: 'Acquista Gift Card',
+
+        findUs: 'Dove trovarci',
+        locationContact: 'Posizione e contatti',
+        location: 'Skopje, Macedonia del Nord',
+        email: 'Email',
+        openingHours: 'Orari di apertura',
+        mondayThursday: 'Lunedì – Giovedì: 12:00 – 00:00',
+        fridaySaturdayHolidays: 'Venerdì, Sabato e festivi: 12:00 – 01:00',
+        sunday: 'Domenica: 12:00 – 00:00',
+        visitSalvatore: 'Visita Salvatore',
+        visitDescription: 'Ci trovi nel cuore di Skopje.',
     },
 
     FR: {
@@ -253,6 +355,40 @@ export const translations = {
         footerRights: 'Tous droits réservés',
         footerLocation: 'Skopje, République de Macédoine',
         FineItalianDining:'Gastronomie italienne raffinée • Skopje',
+        reservationSection: 'Réserver une table',
+        reservationDescription:
+            'Réservez votre table et profitez d’une expérience italienne authentique.',
+        name: 'Nom',
+        numberOfGuests: 'Nombre de personnes',
+        guest: 'personne',
+        guests: 'personnes',
+        date: 'Date',
+        time: 'Heure',
+
+
+        exclusiveExperience: 'Expérience exclusive',
+        secretClubTitle: 'Salvatore Secret Club',
+        secretClubDescription:
+            'Rejoignez notre communauté privée et découvrez des événements exclusifs, des dîners spéciaux, des expériences œnologiques et des surprises créées pour nos membres.',
+        joinSecretClub: 'Rejoindre le Secret Club',
+
+        perfectGift: 'Le cadeau parfait',
+        giftCardTitle: 'Salvatore Gift Card',
+        giftCardDescription:
+            'Offrez à quelqu’un de spécial une expérience gastronomique italienne inoubliable chez Salvatore Skopje.',
+        chooseAmount: 'Choisir le montant',
+        purchaseGiftCard: 'Acheter une Gift Card',
+
+        findUs: 'Nous trouver',
+        locationContact: 'Lieu et contact',
+        location: 'Skopje, Macédoine du Nord',
+        email: 'E-mail',
+        openingHours: 'Heures d’ouverture',
+        mondayThursday: 'Lundi – Jeudi : 12:00 – 00:00',
+        fridaySaturdayHolidays: 'Vendredi, Samedi et jours fériés : 12:00 – 01:00',
+        sunday: 'Dimanche : 12:00 – 00:00',
+        visitSalvatore: 'Visitez Salvatore',
+        visitDescription: 'Retrouvez-nous au cœur de Skopje.',
     },
 
     DE: {
@@ -317,5 +453,39 @@ export const translations = {
         footerRights: 'Alle Rechte vorbehalten',
         footerLocation: 'Skopje, Republik Mazedonien',
         FineItalianDining:'Feine italienische Küche • Skopje',
+        reservationSection: 'Tisch reservieren',
+        reservationDescription:
+            'Reservieren Sie Ihren Tisch und genießen Sie ein authentisches italienisches Erlebnis.',
+        name: 'Name',
+        numberOfGuests: 'Anzahl der Gäste',
+        guest: 'Gast',
+        guests: 'Gäste',
+        date: 'Datum',
+        time: 'Uhrzeit',
+
+
+        exclusiveExperience: 'Exklusives Erlebnis',
+        secretClubTitle: 'Salvatore Secret Club',
+        secretClubDescription:
+            'Werden Sie Teil unserer privaten Gemeinschaft und entdecken Sie exklusive Veranstaltungen, besondere Dinner, Weinerlebnisse und Überraschungen für unsere Mitglieder.',
+        joinSecretClub: 'Dem Secret Club beitreten',
+
+        perfectGift: 'Das perfekte Geschenk',
+        giftCardTitle: 'Salvatore Gift Card',
+        giftCardDescription:
+            'Schenken Sie einem besonderen Menschen ein unvergessliches italienisches kulinarisches Erlebnis im Salvatore Skopje.',
+        chooseAmount: 'Betrag auswählen',
+        purchaseGiftCard: 'Gift Card kaufen',
+
+        findUs: 'So finden Sie uns',
+        locationContact: 'Standort & Kontakt',
+        location: 'Skopje, Nordmazedonien',
+        email: 'E-Mail',
+        openingHours: 'Öffnungszeiten',
+        mondayThursday: 'Montag – Donnerstag: 12:00 – 00:00',
+        fridaySaturdayHolidays: 'Freitag, Samstag & Feiertage: 12:00 – 01:00',
+        sunday: 'Sonntag: 12:00 – 00:00',
+        visitSalvatore: 'Salvatore besuchen',
+        visitDescription: 'Sie finden uns im Herzen von Skopje.',
     },
 }

@@ -1,31 +1,35 @@
-import { useState } from "react";
+import { useState } from 'react'
+import { useLanguage } from '../../context/LanguageContext'
+import { translations } from '../../data/translations'
 
 function GiftCard() {
-    const [amount, setAmount] = useState("50");
+    const { language } = useLanguage()
+    const t = translations[language]
+
+    const [amount, setAmount] = useState('50')
 
     const handlePurchase = () => {
-        alert(`Gift Card selected: €${amount}`);
-    };
+        alert(`Gift Card selected: €${amount}`)
+    }
 
     return (
         <section id="gift-card" className="bg-[#FDFBF7] px-6 py-16">
             <div className="mx-auto max-w-3xl text-center">
                 <p className="mb-2 text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
-                    The Perfect Gift
+                    {t.perfectGift}
                 </p>
 
                 <h2 className="mb-4 text-4xl font-serif text-[#0A1F1C]">
-                    Salvatore Gift Card
+                    {t.giftCardTitle}
                 </h2>
 
                 <p className="mx-auto mb-8 max-w-xl text-gray-600">
-                    Give someone special an unforgettable Italian dining experience
-                    at Salvatore Skopje.
+                    {t.giftCardDescription}
                 </p>
 
                 <div className="mx-auto max-w-md rounded-2xl bg-white p-8 shadow-lg">
                     <label className="mb-3 block text-left font-medium">
-                        Choose amount
+                        {t.chooseAmount}
                     </label>
 
                     <select
@@ -44,12 +48,12 @@ function GiftCard() {
                         onClick={handlePurchase}
                         className="w-full rounded-lg bg-[#0A1F1C] px-6 py-3 text-white transition hover:bg-[#163a34]"
                     >
-                        Purchase Gift Card
+                        {t.purchaseGiftCard}
                     </button>
                 </div>
             </div>
         </section>
-    );
+    )
 }
 
-export default GiftCard;
+export default GiftCard

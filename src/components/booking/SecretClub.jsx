@@ -1,4 +1,10 @@
+import { useLanguage } from '../../context/LanguageContext'
+import { translations } from '../../data/translations'
+
 function SecretClub() {
+    const { language } = useLanguage()
+    const t = translations[language]
+
     return (
         <section
             id="secret-club"
@@ -6,25 +12,23 @@ function SecretClub() {
         >
             <div className="mx-auto max-w-3xl text-center">
                 <p className="mb-2 text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
-                    Exclusive Experience
+                    {t.exclusiveExperience}
                 </p>
 
                 <h2 className="mb-5 text-4xl font-serif">
-                    Salvatore Secret Club
+                    {t.secretClubTitle}
                 </h2>
 
                 <p className="mb-8 leading-7 text-gray-300">
-                    Become part of our private community and discover exclusive
-                    events, special dinners, wine experiences and surprises created
-                    for our members.
+                    {t.secretClubDescription}
                 </p>
 
                 <button className="rounded-lg border border-[#D4AF37] px-7 py-3 text-[#D4AF37] transition hover:bg-[#D4AF37] hover:text-[#0A1F1C]">
-                    Join the Secret Club
+                    {t.joinSecretClub}
                 </button>
             </div>
         </section>
-    );
+    )
 }
 
-export default SecretClub;
+export default SecretClub

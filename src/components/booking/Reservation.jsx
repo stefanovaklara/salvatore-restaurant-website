@@ -1,41 +1,46 @@
-import { useState } from "react";
+import { useState } from 'react'
+import { useLanguage } from '../../context/LanguageContext'
+import { translations } from '../../data/translations'
 
 function Reservation() {
+    const { language } = useLanguage()
+    const t = translations[language]
+
     const [formData, setFormData] = useState({
-        name: "",
-        date: "",
-        time: "",
-        guests: "2",
-    });
+        name: '',
+        date: '',
+        time: '',
+        guests: '2',
+    })
 
     const handleChange = (e) => {
         setFormData({
             ...formData,
             [e.target.name]: e.target.value,
-        });
-    };
+        })
+    }
 
     const handleSubmit = (e) => {
-        e.preventDefault();
+        e.preventDefault()
 
         alert(
             `Reservation received for ${formData.name} on ${formData.date} at ${formData.time}.`
-        );
-    };
+        )
+    }
 
     return (
         <section id="reservation" className="bg-[#FDFBF7] px-6 py-16">
             <div className="mx-auto max-w-3xl">
                 <p className="mb-2 text-center text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
-                    Salvatore Skopje
+                    {t.reservationTitle}
                 </p>
 
                 <h2 className="mb-3 text-center text-4xl font-serif text-[#0A1F1C]">
-                    Make a Reservation
+                    {t.reservationHeading}
                 </h2>
 
                 <p className="mb-10 text-center text-gray-600">
-                    Reserve your table and enjoy an authentic Italian experience.
+                    {t.reservationDescription}
                 </p>
 
                 <form
@@ -44,7 +49,7 @@ function Reservation() {
                 >
                     <div>
                         <label className="mb-2 block text-sm font-medium">
-                            Name
+                            {t.name}
                         </label>
 
                         <input
@@ -54,13 +59,12 @@ function Reservation() {
                             onChange={handleChange}
                             required
                             className="w-full rounded-lg border border-gray-300 p-3 outline-none focus:border-[#D4AF37]"
-                            placeholder="Your name"
                         />
                     </div>
 
                     <div>
                         <label className="mb-2 block text-sm font-medium">
-                            Number of guests
+                            {t.numberOfGuests}
                         </label>
 
                         <select
@@ -69,20 +73,22 @@ function Reservation() {
                             onChange={handleChange}
                             className="w-full rounded-lg border border-gray-300 p-3"
                         >
-                            <option value="1">1 guest</option>
-                            <option value="2">2 guests</option>
-                            <option value="3">3 guests</option>
-                            <option value="4">4 guests</option>
-                            <option value="5">5 guests</option>
-                            <option value="6">6 guests</option>
-                            <option value="7">7 guests</option>
-                            <option value="8">8 guests</option>
+                            {Array.from({ length: 8 }, (_, index) => {
+                                const number = index + 1
+
+                                return (
+                                    <option key={number} value={number}>
+                                        {number}{' '}
+                                        {number === 1 ? t.guest : t.guests}
+                                    </option>
+                                )
+                            })}
                         </select>
                     </div>
 
                     <div>
                         <label className="mb-2 block text-sm font-medium">
-                            Date
+                            {t.date}
                         </label>
 
                         <input
@@ -97,7 +103,7 @@ function Reservation() {
 
                     <div>
                         <label className="mb-2 block text-sm font-medium">
-                            Time
+                            {t.time}
                         </label>
 
                         <input
@@ -112,14 +118,14 @@ function Reservation() {
 
                     <button
                         type="submit"
-                        className="md:col-span-2 rounded-lg bg-[#0A1F1C] px-6 py-3 font-medium text-white transition hover:bg-[#163a34]"
+                        className="rounded-lg bg-[#0A1F1C] px-6 py-3 font-medium text-white transition hover:bg-[#163a34] md:col-span-2"
                     >
-                        Reserve a Table
+                        {t.reserveTable}
                     </button>
                 </form>
             </div>
         </section>
-    );
+    )
 }
 
-export default Reservation;
+export default Reservation

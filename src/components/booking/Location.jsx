@@ -1,14 +1,20 @@
+import { useLanguage } from '../../context/LanguageContext'
+import { translations } from '../../data/translations'
+
 function Location() {
+    const { language } = useLanguage()
+    const t = translations[language]
+
     return (
         <section id="location" className="bg-[#0A1F1C] px-6 py-16 text-white">
             <div className="mx-auto max-w-5xl">
                 <div className="mb-10 text-center">
                     <p className="mb-2 text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
-                        Find Us
+                        {t.findUs}
                     </p>
 
                     <h2 className="text-4xl font-serif">
-                        Location & Contact
+                        {t.locationContact}
                     </h2>
                 </div>
 
@@ -17,43 +23,42 @@ function Location() {
                         <h3 className="mb-5 text-2xl font-serif text-[#D4AF37]">
                             Salvatore Skopje
                         </h3>
+
                         <div className="space-y-4 text-gray-300">
+                            <p>{t.location}</p>
+
                             <p>
-                                Skopje, North Macedonia
+                                {t.contact}: +389 70 248 248
                             </p>
 
                             <p>
-                                Contact: +389 70 248 248
-                            </p>
-
-                            <p>
-                                Email: info@salvatore.mk
+                                {t.email}: info@salvatore.mk
                             </p>
 
                             <div className="pt-2">
                                 <p className="font-medium text-white">
-                                    Opening Hours
+                                    {t.openingHours}
                                 </p>
 
                                 <p className="mt-2 text-sm leading-7 text-[var(--color-salvatore-cream)]/70">
-                                    Monday – Thursday: 12:00 – 00:00<br />
-                                    Friday, Saturday & Public Holidays: 12:00 – 01:00<br />
-                                    Sunday: 12:00 – 00:00
+                                    {t.mondayThursday}
+                                    <br />
+                                    {t.fridaySaturdayHolidays}
+                                    <br />
+                                    {t.sunday}
                                 </p>
                             </div>
                         </div>
-
                     </div>
+
                     <div className="flex min-h-[300px] items-center justify-center rounded-2xl bg-[#163a34] p-8 text-center">
                         <div>
-                            <p className="mb-4 text-5xl"></p>
-
                             <h3 className="mb-3 text-xl font-serif">
-                                Visit Salvatore
+                                {t.visitSalvatore}
                             </h3>
 
                             <p className="mb-6 text-gray-300">
-                                Find us in the heart of Skopje.
+                                {t.visitDescription}
                             </p>
 
                             <a
@@ -69,7 +74,7 @@ function Location() {
                 </div>
             </div>
         </section>
-    );
+    )
 }
 
-export default Location;
+export default Location
