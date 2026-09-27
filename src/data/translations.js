@@ -1,3 +1,4 @@
+```js
 export const translations = {
     MK: {
         home: 'Почетна',
@@ -42,6 +43,18 @@ export const translations = {
         reserve: 'Резервирај',
         reserveTable: 'Резервирај маса',
         exploreMenu: 'Истражи го менито',
+
+        // Reservation
+        makeReservation: 'Резервирај маса',
+        reserveDescription:
+            'Резервирајте ја вашата маса и уживајте во автентично италијанско искуство.',
+        name: 'Име',
+        yourName: 'Вашето име',
+        numberOfGuests: 'Број на гости',
+        guest: 'гостин',
+        guests: 'гости',
+        date: 'Датум',
+        time: 'Време',
 
         heroTitle: 'Salvatore',
 
@@ -124,9 +137,7 @@ export const translations = {
         footerDays: 'Понеделник – Недела',
         footerRights: 'Сите права се задржани',
         footerLocation: 'Скопје, Република Македонија',
-
-        FineItalianDining:
-            'Италијанска кујна • Скопје',
+        FineItalianDining: 'Италијанска кујна • Скопје',
     },
 
     EN: {
@@ -173,6 +184,18 @@ export const translations = {
         reserve: 'Reserve',
         reserveTable: 'Reserve a Table',
         exploreMenu: 'Explore Menu',
+
+        // Reservation
+        makeReservation: 'Make a Reservation',
+        reserveDescription:
+            'Reserve your table and enjoy an authentic Italian experience.',
+        name: 'Name',
+        yourName: 'Your name',
+        numberOfGuests: 'Number of guests',
+        guest: 'guest',
+        guests: 'guests',
+        date: 'Date',
+        time: 'Time',
 
         heroTitle: 'Salvatore',
 
@@ -254,11 +277,8 @@ export const translations = {
         footerOpeningHours: 'Opening Hours',
         footerDays: 'Monday – Sunday',
         footerRights: 'All rights reserved',
-        footerLocation:
-            'Skopje, Republic of North Macedonia',
-
-        FineItalianDining:
-            'Fine Italian Dining • Skopje',
+        footerLocation: 'Skopje, Republic of North Macedonia',
+        FineItalianDining: 'Fine Italian Dining • Skopje',
     },
 
     IT: {
@@ -277,8 +297,7 @@ export const translations = {
         viewMenu: 'Visualizza il menu',
 
         ourFoodMenu: 'La nostra cucina',
-        ourDrinksMenu:
-            'La nostra carta delle bevande',
+        ourDrinksMenu: 'La nostra carta delle bevande',
 
         foodMenu: 'Menu di cucina',
         drinksMenu: 'Menu delle bevande',
@@ -298,8 +317,7 @@ export const translations = {
         pricesAndService: 'Prezzi e servizio',
         allergies: 'Allergie',
         allergens: 'Allergeni',
-        kitchenProducts:
-            'Prodotti utilizzati in cucina',
+        kitchenProducts: 'Prodotti utilizzati in cucina',
         onTheTable: 'Al tavolo',
 
         extraSupplement: 'Supplemento extra',
@@ -309,6 +327,18 @@ export const translations = {
         reserve: 'Prenota',
         reserveTable: 'Prenota un tavolo',
         exploreMenu: 'Esplora il menu',
+
+        // Reservation
+        makeReservation: 'Prenota un tavolo',
+        reserveDescription:
+            'Prenota il tuo tavolo e vivi un’autentica esperienza italiana.',
+        name: 'Nome',
+        yourName: 'Il tuo nome',
+        numberOfGuests: 'Numero di ospiti',
+        guest: 'ospite',
+        guests: 'ospiti',
+        date: 'Data',
+        time: 'Ora',
 
         heroTitle: 'Salvatore',
 
@@ -390,11 +420,8 @@ export const translations = {
         footerOpeningHours: 'Orari di apertura',
         footerDays: 'Lunedì – Domenica',
         footerRights: 'Tutti i diritti riservati',
-        footerLocation:
-            'Skopje, Repubblica di Macedonia',
-
-        FineItalianDining:
-            'Alta cucina italiana • Skopje',
+        footerLocation: 'Skopje, Repubblica di Macedonia',
+        FineItalianDining: 'Alta cucina italiana • Skopje',
     },
 
     FR: {
@@ -413,8 +440,7 @@ export const translations = {
         viewMenu: 'Voir le menu',
 
         ourFoodMenu: 'Notre cuisine',
-        ourDrinksMenu:
-            'Notre carte des boissons',
+        ourDrinksMenu: 'Notre carte des boissons',
 
         foodMenu: 'Menu de cuisine',
         drinksMenu: 'Menu des boissons',
@@ -434,8 +460,7 @@ export const translations = {
         pricesAndService: 'Prix et service',
         allergies: 'Allergies',
         allergens: 'Allergènes',
-        kitchenProducts:
-            'Produits utilisés en cuisine',
+        kitchenProducts: 'Produits utilisés en cuisine',
         onTheTable: 'À table',
 
         extraSupplement: 'Supplément extra',
@@ -445,6 +470,18 @@ export const translations = {
         reserve: 'Réserver',
         reserveTable: 'Réserver une table',
         exploreMenu: 'Découvrir le menu',
+
+        // Reservation
+        makeReservation: 'Réserver une table',
+        reserveDescription:
+            'Réservez votre table et profitez d’une expérience italienne authentique.',
+        name: 'Nom',
+        yourName: 'Votre nom',
+        numberOfGuests: 'Nombre de personnes',
+        guest: 'personne',
+        guests: 'personnes',
+        date: 'Date',
+        time: 'Heure',
 
         heroTitle: 'Salvatore',
 
@@ -523,15 +560,11 @@ export const translations = {
             'Skopje, République de Macédoine. Une véritable expérience italienne axée sur des ingrédients de qualité et une ambiance inoubliable.',
 
         footerContact: 'Contact',
-        footerOpeningHours:
-            'Heures d’ouverture',
+        footerOpeningHours: 'Heures d’ouverture',
         footerDays: 'Lundi – Dimanche',
         footerRights: 'Tous droits réservés',
-        footerLocation:
-            'Skopje, République de Macédoine',
-
-        FineItalianDining:
-            'Gastronomie italienne raffinée • Skopje',
+        footerLocation: 'Skopje, République de Macédoine',
+        FineItalianDining: 'Gastronomie italienne raffinée • Skopje',
     },
 
     DE: {
@@ -539,8 +572,7 @@ export const translations = {
         menu: 'Speisekarte',
         experience: 'Erlebnis',
         story: 'Unsere Geschichte',
-        usefulInformation:
-            'Nützliche Informationen',
+        usefulInformation: 'Nützliche Informationen',
         vouchers: 'Gutscheine',
         contact: 'Kontakt',
 
@@ -551,8 +583,7 @@ export const translations = {
         viewMenu: 'Menü ansehen',
 
         ourFoodMenu: 'Unsere Küche',
-        ourDrinksMenu:
-            'Unsere Getränkekarte',
+        ourDrinksMenu: 'Unsere Getränkekarte',
 
         foodMenu: 'Speisekarte',
         drinksMenu: 'Getränkekarte',
@@ -569,8 +600,7 @@ export const translations = {
         importantMenuInformation:
             'Wichtige Informationen zu unserer Speisekarte',
 
-        pricesAndService:
-            'Preise und Service',
+        pricesAndService: 'Preise und Service',
 
         allergies: 'Allergien',
         allergens: 'Allergene',
@@ -588,8 +618,19 @@ export const translations = {
         reservationTitle: 'Reservierungen',
         reserve: 'Reservieren',
         reserveTable: 'Tisch reservieren',
-        exploreMenu:
-            'Speisekarte entdecken',
+        exploreMenu: 'Speisekarte entdecken',
+
+        // Reservation
+        makeReservation: 'Tisch reservieren',
+        reserveDescription:
+            'Reservieren Sie Ihren Tisch und genießen Sie ein authentisches italienisches Erlebnis.',
+        name: 'Name',
+        yourName: 'Ihr Name',
+        numberOfGuests: 'Anzahl der Gäste',
+        guest: 'Gast',
+        guests: 'Gäste',
+        date: 'Datum',
+        time: 'Uhrzeit',
 
         heroTitle: 'Salvatore',
 
@@ -668,18 +709,11 @@ export const translations = {
             'Skopje, Republik Mazedonien. Ein echtes italienisches Erlebnis mit Fokus auf hochwertige Zutaten und ein unvergessliches Ambiente.',
 
         footerContact: 'Kontakt',
-        footerOpeningHours:
-            'Öffnungszeiten',
-
+        footerOpeningHours: 'Öffnungszeiten',
         footerDays: 'Montag – Sonntag',
-
-        footerRights:
-            'Alle Rechte vorbehalten',
-
-        footerLocation:
-            'Skopje, Republik Mazedonien',
-
-        FineItalianDining:
-            'Feine italienische Küche • Skopje',
+        footerRights: 'Alle Rechte vorbehalten',
+        footerLocation: 'Skopje, Republik Mazedonien',
+        FineItalianDining: 'Feine italienische Küche • Skopje',
     },
-}
+};
+```
