@@ -29,26 +29,29 @@ function Reservation() {
     }
 
     return (
-        <section id="reservation" className="bg-[#FDFBF7] px-6 py-16">
+        <section
+            id="reservation"
+            className="scroll-mt-20 bg-[var(--bg-primary)] px-6 py-16"
+        >
             <div className="mx-auto max-w-3xl">
                 <p className="mb-2 text-center text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
                     {t.reservationTitle}
                 </p>
 
-                <h2 className="mb-3 text-center text-4xl font-serif text-[#0A1F1C]">
+                <h2 className="mb-3 text-center text-4xl font-serif text-[var(--text-primary)]">
                     {t.reservationHeading}
                 </h2>
 
-                <p className="mb-10 text-center text-gray-600">
+                <p className="mb-10 text-center text-[var(--text-primary)]/70">
                     {t.reservationDescription}
                 </p>
 
                 <form
                     onSubmit={handleSubmit}
-                    className="grid gap-5 rounded-2xl bg-white p-8 shadow-lg md:grid-cols-2"
+                    className="grid gap-5 rounded-2xl border border-[#D4AF37]/20 bg-white p-8 shadow-lg dark:bg-[#102A26]"
                 >
                     <div>
-                        <label className="mb-2 block text-sm font-medium">
+                        <label className="mb-2 block text-sm font-medium text-[var(--text-primary)]">
                             {t.name}
                         </label>
 
@@ -58,12 +61,12 @@ function Reservation() {
                             value={formData.name}
                             onChange={handleChange}
                             required
-                            className="w-full rounded-lg border border-gray-300 p-3 outline-none focus:border-[#D4AF37]"
+                            className="w-full rounded-lg border border-gray-300 bg-white p-3 text-gray-900 outline-none focus:border-[#D4AF37] dark:border-white/20 dark:bg-[#0A1F1C] dark:text-white"
                         />
                     </div>
 
                     <div>
-                        <label className="mb-2 block text-sm font-medium">
+                        <label className="mb-2 block text-sm font-medium text-[var(--text-primary)]">
                             {t.numberOfGuests}
                         </label>
 
@@ -71,7 +74,7 @@ function Reservation() {
                             name="guests"
                             value={formData.guests}
                             onChange={handleChange}
-                            className="w-full rounded-lg border border-gray-300 p-3"
+                            className="w-full rounded-lg border border-gray-300 bg-white p-3 text-gray-900 outline-none dark:border-white/20 dark:bg-[#0A1F1C] dark:text-white"
                         >
                             {Array.from({ length: 8 }, (_, index) => {
                                 const number = index + 1
@@ -87,7 +90,7 @@ function Reservation() {
                     </div>
 
                     <div>
-                        <label className="mb-2 block text-sm font-medium">
+                        <label className="mb-2 block text-sm font-medium text-[var(--text-primary)]">
                             {t.date}
                         </label>
 
@@ -97,12 +100,12 @@ function Reservation() {
                             value={formData.date}
                             onChange={handleChange}
                             required
-                            className="w-full rounded-lg border border-gray-300 p-3"
+                            className="w-full rounded-lg border border-gray-300 bg-white p-3 text-gray-900 outline-none focus:border-[#D4AF37] dark:border-white/20 dark:bg-[#0A1F1C] dark:text-white"
                         />
                     </div>
 
                     <div>
-                        <label className="mb-2 block text-sm font-medium">
+                        <label className="mb-2 block text-sm font-medium text-[var(--text-primary)]">
                             {t.time}
                         </label>
 
@@ -112,13 +115,13 @@ function Reservation() {
                             value={formData.time}
                             onChange={handleChange}
                             required
-                            className="w-full rounded-lg border border-gray-300 p-3"
+                            className="w-full rounded-lg border border-gray-300 bg-white p-3 text-gray-900 outline-none focus:border-[#D4AF37] dark:border-white/20 dark:bg-[#0A1F1C] dark:text-white"
                         />
                     </div>
 
                     <button
                         type="submit"
-                        className="rounded-lg bg-[#0A1F1C] px-6 py-3 font-medium text-white transition hover:bg-[#163a34] md:col-span-2"
+                        className="rounded-lg bg-[#0A1F1C] px-6 py-3 font-medium text-white transition hover:bg-[#163a34] dark:bg-[#D4AF37] dark:text-[#0A1F1C] dark:hover:bg-[#C5A059]"
                     >
                         {t.reserveTable}
                     </button>
