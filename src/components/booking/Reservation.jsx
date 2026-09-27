@@ -1,6 +1,11 @@
 import { useState } from "react";
+import { useLanguage } from "../../context/LanguageContext";
+import { translations } from "../../data/translations";
 
 function Reservation() {
+    const { language } = useLanguage();
+    const t = translations[language];
+
     const [formData, setFormData] = useState({
         name: "",
         date: "",
@@ -31,11 +36,11 @@ function Reservation() {
                 </p>
 
                 <h2 className="mb-3 text-center text-4xl font-serif text-[#0A1F1C]">
-                    Make a Reservation
+                    {t.makeReservation}
                 </h2>
 
                 <p className="mb-10 text-center text-gray-600">
-                    Reserve your table and enjoy an authentic Italian experience.
+                    {t.reserveDescription}
                 </p>
 
                 <form
@@ -44,7 +49,7 @@ function Reservation() {
                 >
                     <div>
                         <label className="mb-2 block text-sm font-medium">
-                            Name
+                            {t.name}
                         </label>
 
                         <input
@@ -54,13 +59,13 @@ function Reservation() {
                             onChange={handleChange}
                             required
                             className="w-full rounded-lg border border-gray-300 p-3 outline-none focus:border-[#D4AF37]"
-                            placeholder="Your name"
+                            placeholder={t.yourName}
                         />
                     </div>
 
                     <div>
                         <label className="mb-2 block text-sm font-medium">
-                            Number of guests
+                            {t.numberOfGuests}
                         </label>
 
                         <select
@@ -69,20 +74,36 @@ function Reservation() {
                             onChange={handleChange}
                             className="w-full rounded-lg border border-gray-300 p-3"
                         >
-                            <option value="1">1 guest</option>
-                            <option value="2">2 guests</option>
-                            <option value="3">3 guests</option>
-                            <option value="4">4 guests</option>
-                            <option value="5">5 guests</option>
-                            <option value="6">6 guests</option>
-                            <option value="7">7 guests</option>
-                            <option value="8">8 guests</option>
+                            <option value="1">
+                                1 {t.guest}
+                            </option>
+                            <option value="2">
+                                2 {t.guests}
+                            </option>
+                            <option value="3">
+                                3 {t.guests}
+                            </option>
+                            <option value="4">
+                                4 {t.guests}
+                            </option>
+                            <option value="5">
+                                5 {t.guests}
+                            </option>
+                            <option value="6">
+                                6 {t.guests}
+                            </option>
+                            <option value="7">
+                                7 {t.guests}
+                            </option>
+                            <option value="8">
+                                8 {t.guests}
+                            </option>
                         </select>
                     </div>
 
                     <div>
                         <label className="mb-2 block text-sm font-medium">
-                            Date
+                            {t.date}
                         </label>
 
                         <input
@@ -97,7 +118,7 @@ function Reservation() {
 
                     <div>
                         <label className="mb-2 block text-sm font-medium">
-                            Time
+                            {t.time}
                         </label>
 
                         <input
@@ -114,7 +135,7 @@ function Reservation() {
                         type="submit"
                         className="md:col-span-2 rounded-lg bg-[#0A1F1C] px-6 py-3 font-medium text-white transition hover:bg-[#163a34]"
                     >
-                        Reserve a Table
+                        {t.reserveTable}
                     </button>
                 </form>
             </div>

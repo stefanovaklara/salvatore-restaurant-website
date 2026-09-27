@@ -43,6 +43,18 @@ export const translations = {
         reserveTable: 'Резервирај маса',
         exploreMenu: 'Истражи го менито',
 
+        // Reservation
+        makeReservation: 'Резервирај маса',
+        reserveDescription:
+            'Резервирајте ја вашата маса и уживајте во автентично италијанско искуство.',
+        name: 'Име',
+        yourName: 'Вашето име',
+        numberOfGuests: 'Број на гости',
+        guest: 'гостин',
+        guests: 'гости',
+        date: 'Датум',
+        time: 'Време',
+
         heroTitle: 'Salvatore',
         heroDescription:
             'Елегантно италијанско гастрономско искуство во срцето на Скопје, инспирирано од традицијата, страста и La Dolce Vita.',
@@ -60,7 +72,7 @@ export const translations = {
         footerDays: 'Понеделник – Недела',
         footerRights: 'Сите права се задржани',
         footerLocation: 'Скопје, Република Македонија',
-        FineItalianDining:'Италијанска кујна • Скопје',
+        FineItalianDining: 'Италијанска кујна • Скопје',
     },
 
     EN: {
@@ -107,6 +119,18 @@ export const translations = {
         reserveTable: 'Reserve a Table',
         exploreMenu: 'Explore Menu',
 
+        // Reservation
+        makeReservation: 'Make a Reservation',
+        reserveDescription:
+            'Reserve your table and enjoy an authentic Italian experience.',
+        name: 'Name',
+        yourName: 'Your name',
+        numberOfGuests: 'Number of guests',
+        guest: 'guest',
+        guests: 'guests',
+        date: 'Date',
+        time: 'Time',
+
         heroTitle: 'Salvatore',
         heroDescription:
             'An elegant Italian gastronomic experience in the heart of Skopje, inspired by tradition, passion and La Dolce Vita.',
@@ -123,8 +147,8 @@ export const translations = {
         footerOpeningHours: 'Opening Hours',
         footerDays: 'Monday – Sunday',
         footerRights: 'All rights reserved',
-        footerLocation:'Skopje, Republic of Macedonia',
-        FineItalianDining:'Fine Italian Dining • Skopje',
+        footerLocation: 'Skopje, Republic of Macedonia',
+        FineItalianDining: 'Fine Italian Dining • Skopje',
     },
 
     IT: {
@@ -171,6 +195,18 @@ export const translations = {
         reserveTable: 'Prenota un tavolo',
         exploreMenu: 'Esplora il menu',
 
+        // Reservation
+        makeReservation: 'Prenota un tavolo',
+        reserveDescription:
+            'Prenota il tuo tavolo e vivi un’autentica esperienza italiana.',
+        name: 'Nome',
+        yourName: 'Il tuo nome',
+        numberOfGuests: 'Numero di ospiti',
+        guest: 'ospite',
+        guests: 'ospiti',
+        date: 'Data',
+        time: 'Ora',
+
         heroTitle: 'Salvatore',
         heroDescription:
             'Un’elegante esperienza gastronomica italiana nel cuore di Skopje, ispirata alla tradizione, alla passione e alla Dolce Vita.',
@@ -188,7 +224,7 @@ export const translations = {
         footerDays: 'Lunedì – Domenica',
         footerRights: 'Tutti i diritti riservati',
         footerLocation: 'Skopje, Repubblica di Macedonia',
-        FineItalianDining:'Alta cucina italiana • Skopje',
+        FineItalianDining: 'Alta cucina italiana • Skopje',
     },
 
     FR: {
@@ -235,6 +271,18 @@ export const translations = {
         reserveTable: 'Réserver une table',
         exploreMenu: 'Découvrir le menu',
 
+        // Reservation
+        makeReservation: 'Réserver une table',
+        reserveDescription:
+            'Réservez votre table et profitez d’une expérience italienne authentique.',
+        name: 'Nom',
+        yourName: 'Votre nom',
+        numberOfGuests: 'Nombre de personnes',
+        guest: 'personne',
+        guests: 'personnes',
+        date: 'Date',
+        time: 'Heure',
+
         heroTitle: 'Salvatore',
         heroDescription:
             'Une élégante expérience gastronomique italienne au cœur de Skopje, inspirée par la tradition, la passion et la Dolce Vita.',
@@ -252,7 +300,7 @@ export const translations = {
         footerDays: 'Lundi – Dimanche',
         footerRights: 'Tous droits réservés',
         footerLocation: 'Skopje, République de Macédoine',
-        FineItalianDining:'Gastronomie italienne raffinée • Skopje',
+        FineItalianDining: 'Gastronomie italienne raffinée • Skopje',
     },
 
     DE: {
@@ -299,6 +347,18 @@ export const translations = {
         reserveTable: 'Tisch reservieren',
         exploreMenu: 'Speisekarte entdecken',
 
+        // Reservation
+        makeReservation: 'Tisch reservieren',
+        reserveDescription:
+            'Reservieren Sie Ihren Tisch und genießen Sie ein authentisches italienisches Erlebnis.',
+        name: 'Name',
+        yourName: 'Ihr Name',
+        numberOfGuests: 'Anzahl der Gäste',
+        guest: 'Gast',
+        guests: 'Gäste',
+        date: 'Datum',
+        time: 'Uhrzeit',
+
         heroTitle: 'Salvatore',
         heroDescription:
             'Ein elegantes italienisches gastronomisches Erlebnis im Herzen von Skopje, inspiriert von Tradition, Leidenschaft und La Dolce Vita.',
@@ -316,6 +376,6 @@ export const translations = {
         footerDays: 'Montag – Sonntag',
         footerRights: 'Alle Rechte vorbehalten',
         footerLocation: 'Skopje, Republik Mazedonien',
-        FineItalianDining:'Feine italienische Küche • Skopje',
+        FineItalianDining: 'Feine italienische Küche • Skopje',
     },
 }
