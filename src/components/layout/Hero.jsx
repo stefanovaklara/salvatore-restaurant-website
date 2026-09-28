@@ -71,7 +71,7 @@ function Hero() {
 
                 <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
                     <a
-                        href="#reservations"
+                        href="#reservation"
                         className="rounded-sm bg-[var(--color-salvatore-gold)] px-7 py-3 font-semibold text-[var(--color-salvatore-green)] transition hover:scale-105"
                     >
                         {t.reserveTable}

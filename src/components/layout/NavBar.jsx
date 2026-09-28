@@ -102,7 +102,7 @@ function Navbar() {
                     </button>
 
                     <a
-                        href="/#reservations"
+                        href="/#reservation"
                         className="rounded-full bg-[#D4AF37] px-5 py-2 text-xs font-semibold uppercase tracking-wider text-black transition hover:scale-105"
                     >
                         {t.reserve}
@@ -139,7 +139,7 @@ function Navbar() {
                         ))}
 
                         <a
-                            href="/#reservations"
+                            href="/#reservation"
                             onClick={handleNavigation}
                             className="w-fit rounded-full bg-[#D4AF37] px-6 py-3 text-sm font-semibold uppercase tracking-wider text-black"
                         >
