@@ -7,7 +7,7 @@ import Footer from './components/layout/Footer'
 import Hero from './components/layout/Hero'
 import NavBar from './components/layout/NavBar'
 import UsefulInformation from './components/layout/UsefulInformation'
-
+import CookieBanner from './components/layout/CookieBanner'
 import Esperienza from './components/layout/Esperienza'
 import FoodMenuPage from './components/menu/FoodMenuPage'
 import DrinksMenuPage from './components/menu/DrinksMenuPage'
@@ -56,7 +56,7 @@ function App() {
     return (
         <>
             <NavBar />
-
+            <CookieBanner />
             <main>
                 <Hero />
 

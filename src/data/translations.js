@@ -25,6 +25,11 @@ export const translations = {
         usefulInformation: 'Корисни информации',
         vouchers: 'Ваучери',
         contact: 'Контакт',
+        cookieTitle: 'Колачиња',
+        cookieDescription:
+            'Оваа веб-страница користи колачиња за подобро корисничко искуство.',
+        cookieAccept: 'Прифати',
+        cookieDecline: 'Одбиј',
 
         ourMenu: 'Нашето мени',
         food: 'Храна',
@@ -145,6 +150,11 @@ export const translations = {
         usefulInformation: 'Useful Information',
         vouchers: 'Vouchers',
         contact: 'Contact',
+        cookieTitle: 'Cookies',
+        cookieDescription:
+            'This website uses cookies to provide a better user experience.',
+        cookieAccept: 'Accept',
+        cookieDecline: 'Decline',
 
         ourMenu: 'Our Menu',
         viewMenu: 'View Menu',
@@ -263,6 +273,11 @@ export const translations = {
         usefulInformation: 'Informazioni utili',
         vouchers: 'Buoni regalo',
         contact: 'Contatti',
+        cookieTitle: 'Cookie',
+        cookieDescription:
+            'Questo sito web utilizza i cookie per offrirti una migliore esperienza.',
+        cookieAccept: 'Accetta',
+        cookieDecline: 'Rifiuta',
 
         ourMenu: 'Il nostro menu',
         viewMenu: 'Visualizza il menu',
@@ -381,6 +396,11 @@ export const translations = {
         usefulInformation: 'Informations utiles',
         vouchers: 'Bons cadeaux',
         contact: 'Contact',
+        cookieTitle: 'Cookies',
+        cookieDescription:
+            'Ce site utilise des cookies pour vous offrir une meilleure expérience.',
+        cookieAccept: 'Accepter',
+        cookieDecline: 'Refuser',
 
         ourMenu: 'Notre menu',
         viewMenu: 'Voir le menu',
@@ -499,6 +519,11 @@ export const translations = {
         usefulInformation: 'Nützliche Informationen',
         vouchers: 'Gutscheine',
         contact: 'Kontakt',
+        cookieTitle: 'Cookies',
+        cookieDescription:
+            'Diese Website verwendet Cookies, um Ihnen ein besseres Nutzererlebnis zu bieten.',
+        cookieAccept: 'Akzeptieren',
+        cookieDecline: 'Ablehnen',
 
         ourMenu: 'Unsere Speisekarte',
         viewMenu: 'Menü ansehen',
