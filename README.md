@@ -18,6 +18,7 @@ The website is designed to reflect the restaurant's premium identity while provi
 
 The website provides visitors with the ability to:
 
+- Accept and manage cookie preferences
 - Discover the restaurant and its atmosphere
 - Explore food and drinks menus
 - Learn about restaurant services and amenities
@@ -30,6 +31,16 @@ The website provides visitors with the ability to:
 - Change the website language
 - Switch between visual themes
 - Control ambient restaurant music
+
+---
+
+# Cookie Consent
+
+The website includes a **Cookie Consent** feature that allows visitors to manage their cookie preferences when accessing the website.
+
+The cookie consent interface provides visitors with control over whether they accept or reject the use of cookies.
+
+This feature was added to provide a more transparent and user-friendly experience regarding website cookie usage.
 
 ---
 
@@ -302,27 +313,27 @@ The navigation also provides a mobile-specific menu for smaller screens.
 
 The website follows a natural journey for a visitor interested in an exclusive dining experience.
 
-### Step 1 — Discover
+### Step 1 - Discover
 
 The visitor enters the website and is introduced to Salvatore through the Hero section and visual identity.
 
-### Step 2 — Explore
+### Step 2 - Explore
 
 The visitor can explore the food and drinks menus.
 
-### Step 3 — Find Their Match
+### Step 3 - Find Their Match
 
 The visitor can use the Matchmaker to answer questions about their preferences and receive a personalized restaurant recommendation.
 
-### Step 4 — Learn
+### Step 4 - Learn
 
 The Useful Information section provides practical information about visiting the restaurant.
 
-### Step 5 — Reserve
+### Step 5 - Reserve
 
 The visitor can access the reservation form directly from the navigation or the main Hero section.
 
-### Step 6 — Visit
+### Step 6 - Visit
 
 The Contact and Location sections provide the information needed to contact and visit the restaurant.
 
