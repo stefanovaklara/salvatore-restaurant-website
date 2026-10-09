@@ -34,7 +34,7 @@ function CookieBanner() {
         <div className="fixed bottom-4 left-4 right-4 z-[100] mx-auto max-w-4xl rounded-2xl border border-[#D4AF37]/30 bg-white p-5 shadow-2xl dark:bg-[#102A26] md:flex md:items-center md:justify-between md:gap-6">
             <div className="mb-4 md:mb-0">
                 <h3 className="mb-2 font-serif text-xl font-semibold text-[#1C1917] dark:text-white">
-                    🍪 {t.cookieTitle}
+                    {t.cookieTitle}
                 </h3>
 
                 <p className="text-sm leading-6 text-[#1C1917]/70 dark:text-white/70">
