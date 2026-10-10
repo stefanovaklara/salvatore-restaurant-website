@@ -131,7 +131,9 @@ The recommendation can include:
 - Dessert
 - Cigars
 
-The visitor can then save the suggestion or start a new Matchmaker session to explore another recommendation.
+After completing the questionnaire, visitors receive personalized food and drink recommendations based on their preferences and the available restaurant menu data.
+
+Visitors can download their personalized Matchmaker experience immediately as a text file. The downloaded summary includes their answers, personal profile, recommended menu items, prices and price summary.
 
 The Matchmaker is implemented as a frontend feature using predefined restaurant and recommendation data. It does not depend on an external AI API.
 
@@ -208,9 +210,15 @@ The goal of this section is to make important restaurant policies, services and 
 
 # Gift Vouchers
 
-The website includes a dedicated section for restaurant gift vouchers.
+The website includes a dedicated gift voucher interface for the Salvatore dining experience.
 
-The voucher section represents an additional service connected to the restaurant experience and provides visitors with information about gifting a Salvatore dining experience.
+The voucher functionality includes:
+
+- **Mandatory recipient/buyer email field** with information explaining that payment must be completed before the official voucher PDF and QR code can be issued.
+- **Visible demonstration code:** `123456789ABC`, displayed on both the front and back of the voucher.
+- **Demo and validity notices:** the voucher is presented for demonstration purposes, and the download functionality is disabled. The official PDF voucher and QR code are issued after successful payment.
+
+The current implementation is a demonstration interface. It does not process real payments or automatically generate official PDF vouchers or QR codes.
 
 ---
 
