@@ -1,19 +1,30 @@
+import { useMemo } from 'react'
 import MenuGallery from './MenuGallery'
 import { foodImages } from '../../data/menuImages'
 import fixedMenuImage from '../../assets/Screenshot 2026-09-17 122018.png'
 import {
-    foodMenu,
-    extraSupplements,
-    menuInformation
+    getFoodMenu,
+    getExtraSupplements,
+    getMenuInformation
 } from '../../data/salvatoreData'
+// ВНИМАНИЕ: прилагоди ги патеките според твојот проект
+import { useLanguage } from '../../context/LanguageContext'
+import { translations } from '../../data/translations'
 
 function FoodMenuPage() {
+    const { language } = useLanguage()
+    const t = translations[language] ?? translations.MK
+
+    const foodMenu = useMemo(() => getFoodMenu(language), [language])
+    const extraSupplements = useMemo(() => getExtraSupplements(language), [language])
+    const menuInformation = useMemo(() => getMenuInformation(language), [language])
+
     return (
         <main className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)]">
 
             <MenuGallery
                 images={foodImages}
-                title="Food"
+                title={t.food}
             />
 
             <section className="relative overflow-hidden">
@@ -29,19 +40,15 @@ function FoodMenuPage() {
                     <div className="max-w-3xl text-center text-white">
 
                         <p className="mb-4 text-sm uppercase tracking-[0.4em] text-[var(--accent-gold)]">
-                            IL MENU
+
                         </p>
 
                         <h2 className="font-serif-luxury text-4xl md:text-6xl">
-                            Нашата кујна
+                            {t.ourFoodMenu}
                         </h2>
 
                         <p className="mt-6 text-base leading-8 text-white/80 md:text-lg">
-                            Вкусот на Италија во секое јадење.
-                            Нашето мени е инспирирано од традиционалните
-                            рецепти, користејќи само најквалитетни и свежи
-                            состојки, внимателно избрани за да ви донесеме
-                            автентично гастрономско искуство.
+                            {t.foodDescription}
                         </p>
 
                     </div>
@@ -57,7 +64,7 @@ function FoodMenuPage() {
                     </p>
 
                     <h2 className="mt-3 font-serif-luxury text-4xl md:text-6xl">
-                        Food Menu
+                        {t.foodMenu}
                     </h2>
 
                 </div>
@@ -140,8 +147,8 @@ function FoodMenuPage() {
 
                 <section className="mt-20 border border-[var(--accent-gold)]/30 p-6 md:p-10">
 
-                    <h3 className="font-serif-luxury text-2xl text-[var(--accent-gold)]">
-                        SUPPLEMENTO EXTRA
+                    <h3 className="font-serif-luxury text-2xl uppercase text-[var(--accent-gold)]">
+                        {t.extraSupplement}
                     </h3>
 
                     <div className="mt-6 space-y-3">
@@ -174,11 +181,11 @@ function FoodMenuPage() {
                     <div className="text-center">
 
                         <p className="text-sm uppercase tracking-[0.4em] text-[var(--accent-gold)]">
-                            Informazioni
+                            {t.importantInformation}
                         </p>
 
                         <h2 className="mt-3 font-serif-luxury text-3xl md:text-5xl">
-                            Важно за нашето мени
+                            {t.importantMenuInformation}
                         </h2>
 
                     </div>
@@ -187,7 +194,7 @@ function FoodMenuPage() {
 
                         <div className="border border-white/10 p-6">
                             <h3 className="font-serif-luxury text-xl text-[var(--accent-gold)]">
-                                Цени и услуга
+                                {t.pricesAndService}
                             </h3>
 
                             <div className="mt-5 space-y-4 text-sm leading-7 text-white/75">
@@ -199,7 +206,7 @@ function FoodMenuPage() {
 
                         <div className="border border-white/10 p-6">
                             <h3 className="font-serif-luxury text-xl text-[var(--accent-gold)]">
-                                Алергии
+                                {t.allergies}
                             </h3>
 
                             <p className="mt-5 text-sm leading-7 text-white/75">
@@ -212,7 +219,7 @@ function FoodMenuPage() {
                     <div className="mt-8 border border-white/10 p-6">
 
                         <h3 className="font-serif-luxury text-xl text-[var(--accent-gold)]">
-                            Алергени
+                            {t.allergens}
                         </h3>
 
                         <div className="mt-5 flex flex-wrap gap-3">
@@ -233,7 +240,7 @@ function FoodMenuPage() {
                     <div className="mt-8 border border-white/10 p-6">
 
                         <h3 className="font-serif-luxury text-xl text-[var(--accent-gold)]">
-                            Употребени производи во кујна
+                            {t.kitchenProducts}
                         </h3>
 
                         <ul className="mt-5 space-y-3 text-sm leading-7 text-white/75">
@@ -249,7 +256,7 @@ function FoodMenuPage() {
                     <div className="mt-8 border border-white/10 p-6">
 
                         <h3 className="font-serif-luxury text-xl text-[var(--accent-gold)]">
-                            На маса
+                            {t.onTheTable}
                         </h3>
 
                         <ul className="mt-5 space-y-3 text-sm leading-7 text-white/75">
