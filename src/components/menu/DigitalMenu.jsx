@@ -47,7 +47,6 @@ function MenuCard({ title, description, images, onClick }) {
                 <div className="text-center text-white">
 
                     <p className="mb-4 text-xs uppercase tracking-[0.5em] text-[var(--accent-gold)]">
-                        IL MENU
                     </p>
 
                     <h3 className="font-serif-luxury text-4xl md:text-5xl">
