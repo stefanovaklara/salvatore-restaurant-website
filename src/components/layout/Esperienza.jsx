@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 import { useLanguage } from '../../context/LanguageContext'
 import { translations } from '../../data/translations'
@@ -57,10 +58,10 @@ function Esperienza() {
             {
                 question: 'Колку сакате да експериментирате?',
                 options: [
-                    'Сакам класици',
+                    'Ги сакам класиците',
                     'Малку експериментирање',
                     'Сакам нешто ново',
-                    'Целосно се препуштам на Salvatore',
+                    'Целосно му верувам на Salvatore',
                 ],
             },
             {
@@ -82,12 +83,12 @@ function Esperienza() {
                 ],
             },
             {
-                question: 'Каква атмосфера сакате на крајот?',
+                question: 'Каква атмосфера посакувате на крајот?',
                 options: [
                     'Мирна и интимна',
                     'Луксузна и елегантна',
                     'Жива и со музика',
-                    'Долга вечер со пијалак и разговор',
+                    'Долга вечер со пијалаци и разговор',
                 ],
             },
         ],
@@ -393,9 +394,7 @@ function Esperienza() {
         ],
     }
 
-    const currentQuestions =
-        questions[language] || questions.EN
-
+    const currentQuestions = questions[language] || questions.EN
     const question = currentQuestions[currentQuestion]
 
     const getTagsFromAnswer = (questionIndex, answerIndex) => {
@@ -406,49 +405,42 @@ function Esperienza() {
                 ['romantic'],
                 ['adventurous'],
             ],
-
             1: [
                 ['pasta'],
                 ['meat'],
                 ['seafood'],
                 ['vegetarian', 'light'],
             ],
-
             2: [
                 ['creamy', 'rich'],
                 ['fresh', 'light'],
                 ['intense'],
                 ['spicy'],
             ],
-
             3: [
                 ['wine'],
                 ['cocktail'],
                 ['champagne', 'sparkling'],
                 ['digestif', 'strong'],
             ],
-
             4: [
                 ['classic'],
                 ['adventurous'],
                 ['adventurous', 'new'],
                 ['adventurous', 'surprise'],
             ],
-
             5: [
                 ['aperitivo', 'light'],
                 ['rich'],
                 ['share', 'celebratory'],
                 ['main'],
             ],
-
             6: [
                 ['dessert'],
                 ['cigar'],
                 ['dessert', 'cigar'],
                 ['drink'],
             ],
-
             7: [
                 ['romantic'],
                 ['elegant'],
@@ -462,15 +454,15 @@ function Esperienza() {
 
     const scoreItem = (item, selectedTags) => {
         return selectedTags.reduce((score, tag) => {
-            if (item.tags.includes(tag)) {
-                return score + 1
-            }
-
-            return score
+            return item.tags.includes(tag) ? score + 1 : score
         }, 0)
     }
 
     const findBestItem = (items, selectedTags) => {
+        if (!items.length) {
+            return null
+        }
+
         let bestItem = items[0]
         let bestScore = -1
 
@@ -487,97 +479,58 @@ function Esperienza() {
     }
 
     const createRecommendation = (finalAnswers) => {
-        const selectedTags = finalAnswers.flatMap(
-            (answer) =>
-                getTagsFromAnswer(
-                    answer.questionIndex,
-                    answer.answerIndex
-                )
+        const selectedTags = finalAnswers.flatMap((answer) =>
+            getTagsFromAnswer(answer.questionIndex, answer.answerIndex)
         )
 
         const starterItems = experienceFood.filter(
             (item) => item.type === 'starter'
         )
-
         const mainItems = experienceFood.filter(
             (item) => item.type === 'main'
         )
-
         const dessertItems = experienceFood.filter(
             (item) => item.type === 'dessert'
         )
-
         const cocktailItems = experienceDrinks.filter(
             (item) => item.type === 'cocktail'
         )
-
         const wineItems = experienceDrinks.filter(
             (item) =>
                 item.type === 'whiteWine' ||
                 item.type === 'redWine' ||
                 item.type === 'roseWine'
         )
-
         const champagneItems = experienceDrinks.filter(
             (item) =>
                 item.type === 'champagne' ||
                 item.type === 'prosecco'
         )
-
         const digestifItems = experienceDrinks.filter(
             (item) => item.type === 'digestif'
         )
 
-        const starter = findBestItem(
-            starterItems,
-            selectedTags
-        )
-
-        const main = findBestItem(
-            mainItems,
-            selectedTags
-        )
-
-        const dessert = findBestItem(
-            dessertItems,
-            selectedTags
-        )
-
-        const cocktail = findBestItem(
-            cocktailItems,
-            selectedTags
-        )
-
-        const wine = findBestItem(
-            wineItems,
-            selectedTags
-        )
-
-        const champagne = findBestItem(
-            champagneItems,
-            selectedTags
-        )
-
-        const digestif = findBestItem(
-            digestifItems,
-            selectedTags
-        )
-
-        const drinks = []
+        const starter = findBestItem(starterItems, selectedTags)
+        const main = findBestItem(mainItems, selectedTags)
+        const dessert = findBestItem(dessertItems, selectedTags)
+        const cocktail = findBestItem(cocktailItems, selectedTags)
+        const wine = findBestItem(wineItems, selectedTags)
+        const champagne = findBestItem(champagneItems, selectedTags)
+        const digestif = findBestItem(digestifItems, selectedTags)
 
         const drinkAnswer = finalAnswers.find(
             (answer) => answer.questionIndex === 3
         )
-
         const drinkIndex = drinkAnswer?.answerIndex
+        const drinks = []
 
-        if (drinkIndex === 0) {
+        if (drinkIndex === 0 && wine) {
             drinks.push(wine)
-        } else if (drinkIndex === 1) {
+        } else if (drinkIndex === 1 && cocktail) {
             drinks.push(cocktail)
-        } else if (drinkIndex === 2) {
+        } else if (drinkIndex === 2 && champagne) {
             drinks.push(champagne)
-        } else {
+        } else if (digestif) {
             drinks.push(digestif)
         }
 
@@ -587,7 +540,8 @@ function Esperienza() {
 
         if (
             eveningAnswer?.answerIndex === 3 &&
-            digestif
+            digestif &&
+            !drinks.some((drink) => drink.id === digestif.id)
         ) {
             drinks.push(digestif)
         }
@@ -595,7 +549,7 @@ function Esperienza() {
         if (
             drinkIndex === 0 &&
             champagne &&
-            champagne.id !== drinks[0]?.id
+            !drinks.some((drink) => drink.id === champagne.id)
         ) {
             drinks.push(champagne)
         }
@@ -618,50 +572,23 @@ function Esperienza() {
         const profileAnswer = finalAnswers.find(
             (answer) => answer.questionIndex === 0
         )
-
         const tasteAnswer = finalAnswers.find(
             (answer) => answer.questionIndex === 2
         )
 
         const profileNames = {
-            MK: [
-                'Елегантен',
-                'Опуштен',
-                'Романтичен',
-                'Авантуристички',
-            ],
-            EN: [
-                'Elegant',
-                'Relaxed',
-                'Romantic',
-                'Adventurous',
-            ],
-            IT: [
-                'Elegante',
-                'Rilassato',
-                'Romantico',
-                'Avventuroso',
-            ],
-            FR: [
-                'Élégant',
-                'Détendu',
-                'Romantique',
-                'Aventureux',
-            ],
-            DE: [
-                'Elegant',
-                'Entspannt',
-                'Romantisch',
-                'Abenteuerlich',
-            ],
+            MK: ['Елегантен', 'Опуштен', 'Романтичен', 'Авантуристички'],
+            EN: ['Elegant', 'Relaxed', 'Romantic', 'Adventurous'],
+            IT: ['Elegante', 'Rilassato', 'Romantico', 'Avventuroso'],
+            FR: ['Élégant', 'Détendu', 'Romantique', 'Aventureux'],
+            DE: ['Elegant', 'Entspannt', 'Romantisch', 'Abenteuerlich'],
         }
 
         const profile =
-            profileNames[language]?.[
-                profileAnswer?.answerIndex ?? 0
-            ] || profileNames.EN[0]
+            profileNames[language]?.[profileAnswer?.answerIndex ?? 0] ||
+            profileNames.EN[0]
 
-        const recommendation = {
+        return {
             profile,
             starter,
             main,
@@ -671,8 +598,6 @@ function Esperienza() {
             dessert,
             tasteIndex: tasteAnswer?.answerIndex ?? 0,
         }
-
-        return recommendation
     }
 
     const handleStart = () => {
@@ -694,17 +619,10 @@ function Esperienza() {
 
         setAnswers(newAnswers)
 
-        if (
-            currentQuestion <
-            currentQuestions.length - 1
-        ) {
+        if (currentQuestion < currentQuestions.length - 1) {
             setCurrentQuestion(currentQuestion + 1)
         } else {
-            const result = createRecommendation(
-                newAnswers
-            )
-
-            setRecommendation(result)
+            setRecommendation(createRecommendation(newAnswers))
         }
     }
 
@@ -721,10 +639,125 @@ function Esperienza() {
             return
         }
 
+        const savedAt = new Date()
+        const currency = t.den || 'ден.'
+
+        const questionAnswers = answers.map(
+            ({ questionIndex, answerIndex }, index) => {
+                const questionData = currentQuestions[questionIndex]
+                const selectedAnswer =
+                    questionData?.options?.[answerIndex] || 'N/A'
+
+                return `${index + 1}. ${questionData?.question || 'Question'}\n   ${selectedAnswer}`
+            }
+        )
+
+        const recommendedItems = [
+            {
+                category: t.experienceAperitivo || 'Aperitivo',
+                item: recommendation.aperitivo,
+            },
+            {
+                category: t.experienceStarter || 'Starter',
+                item: recommendation.starter,
+            },
+            {
+                category: t.experienceMain || 'Main course',
+                item: recommendation.main,
+            },
+            ...recommendation.drinks.map((item) => ({
+                category: t.experienceDrinks || 'Drinks',
+                item,
+            })),
+            {
+                category: t.experienceDessert || 'Dessert',
+                item: recommendation.dessert,
+            },
+        ].filter(({ item }) => Boolean(item))
+
+        const uniqueItems = new Map()
+
+        recommendedItems.forEach(({ item }) => {
+            if (!uniqueItems.has(item.id)) {
+                uniqueItems.set(item.id, item)
+            }
+        })
+
+        const total = [...uniqueItems.values()].reduce(
+            (sum, item) => sum + Number(item.price || 0),
+            0
+        )
+
+        const menuText = recommendedItems
+            .map(
+                ({ category, item }) =>
+                    `${category.toUpperCase()}\n   ${item.name}\n   ${item.price} ${currency}`
+            )
+            .join('\n\n')
+
+        const experienceText = [
+            'SALVATORE',
+            'MY PERSONAL SALVATORE EXPERIENCE',
+            '='.repeat(38),
+            '',
+            `Generated: ${savedAt.toLocaleString()}`,
+            `Language: ${language}`,
+            '',
+            'YOUR PERSONAL PROFILE',
+            '-'.repeat(24),
+            recommendation.profile,
+            '',
+            'YOUR MATCHMAKER ANSWERS',
+            '-'.repeat(24),
+            ...questionAnswers,
+            '',
+            'YOUR PERSONALIZED MENU',
+            '-'.repeat(24),
+            menuText || 'No menu items available.',
+            '',
+            'CIGAR EXPERIENCE',
+            '-'.repeat(24),
+            recommendation.cigar
+                ? getCigarText(language)
+                : getNoCigarText(language),
+            '',
+            'PRICE SUMMARY',
+            '-'.repeat(24),
+            `Total of listed food and drinks: ${total} ${currency}`,
+            'Each recommended menu item is counted only once.',
+            'A cigar price is not included because no specific cigar price is listed.',
+            '',
+            'Your evening, thoughtfully selected by Salvatore.',
+        ].join('\n')
+
         localStorage.setItem(
             'salvatoreExperience',
-            JSON.stringify(recommendation)
+            JSON.stringify({
+                recommendation,
+                answers,
+                language,
+                savedAt: savedAt.toISOString(),
+            })
         )
+
+        const blob = new Blob(
+            ['\uFEFF', experienceText],
+            { type: 'text/plain;charset=utf-8' }
+        )
+
+        const url = URL.createObjectURL(blob)
+        const link = document.createElement('a')
+
+        link.href = url
+        link.download = 'My-Personal-Salvatore-Experience.txt'
+
+        document.body.appendChild(link)
+        link.click()
+        link.remove()
+
+        window.setTimeout(() => {
+            URL.revokeObjectURL(url)
+        }, 1000)
 
         setSaved(true)
     }
@@ -735,7 +768,6 @@ function Esperienza() {
             className="scroll-mt-20 bg-[var(--bg-primary)] px-6 py-24"
         >
             <div className="mx-auto max-w-5xl">
-
                 {!started && (
                     <div className="text-center">
                         <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
@@ -762,45 +794,34 @@ function Esperienza() {
 
                 {started && !recommendation && (
                     <div className="mx-auto max-w-3xl text-center">
-
                         <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
-                            {t.experienceQuestion}{' '}
-                            {currentQuestion + 1}{' '}
-                            {t.experienceOf}{' '}
-                            {currentQuestions.length}
+                            {t.experienceQuestion} {currentQuestion + 1}{' '}
+                            {t.experienceOf} {currentQuestions.length}
                         </p>
 
                         <div className="border border-[#D4AF37]/30 bg-[var(--bg-secondary)] p-8 md:p-12">
-
                             <h3 className="font-serif-luxury text-2xl font-bold text-[var(--text-primary)] md:text-4xl">
                                 {question.question}
                             </h3>
 
                             <div className="mt-10 grid gap-4">
-                                {question.options.map(
-                                    (option, index) => (
-                                        <button
-                                            key={option}
-                                            type="button"
-                                            onClick={() =>
-                                                handleAnswer(index)
-                                            }
-                                            className="border border-[var(--text-primary)]/20 px-6 py-4 text-left text-[var(--text-primary)] transition hover:border-[#D4AF37] hover:text-[#D4AF37]"
-                                        >
-                                            {option}
-                                        </button>
-                                    )
-                                )}
+                                {question.options.map((option, index) => (
+                                    <button
+                                        key={option}
+                                        type="button"
+                                        onClick={() => handleAnswer(index)}
+                                        className="border border-[var(--text-primary)]/20 px-6 py-4 text-left text-[var(--text-primary)] transition hover:border-[#D4AF37] hover:text-[#D4AF37]"
+                                    >
+                                        {option}
+                                    </button>
+                                ))}
                             </div>
-
                         </div>
-
                     </div>
                 )}
 
                 {recommendation && (
                     <div className="mx-auto max-w-4xl">
-
                         <div className="text-center">
                             <p className="mb-4 text-sm uppercase tracking-[0.3em] text-[#D4AF37]">
                                 Salvatore
@@ -819,7 +840,6 @@ function Esperienza() {
                         </div>
 
                         <div className="mt-12 grid gap-5 md:grid-cols-2">
-
                             <RecommendationCard
                                 title={t.experienceAperitivo}
                                 item={recommendation.aperitivo}
@@ -841,23 +861,20 @@ function Esperienza() {
                                 </p>
 
                                 <div className="mt-4 space-y-3">
-                                    {recommendation.drinks.map(
-                                        (drink) => (
-                                            <div
-                                                key={drink.id}
-                                                className="flex items-center justify-between gap-4"
-                                            >
-                                                <span className="text-[var(--text-primary)]">
-                                                    {drink.name}
-                                                </span>
+                                    {recommendation.drinks.map((drink) => (
+                                        <div
+                                            key={drink.id}
+                                            className="flex items-center justify-between gap-4"
+                                        >
+                                            <span className="text-[var(--text-primary)]">
+                                                {drink.name}
+                                            </span>
 
-                                                <span className="text-sm text-[var(--text-secondary)]">
-                                                    {drink.price}{' '}
-                                                    {t.den || 'ден.'}
-                                                </span>
-                                            </div>
-                                        )
-                                    )}
+                                            <span className="text-sm text-[var(--text-secondary)]">
+                                                {drink.price} {t.den || 'ден.'}
+                                            </span>
+                                        </div>
+                                    ))}
                                 </div>
                             </div>
 
@@ -877,11 +894,9 @@ function Esperienza() {
                                         : getNoCigarText(language)}
                                 </p>
                             </div>
-
                         </div>
 
                         <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
-
                             <button
                                 type="button"
                                 onClick={handleSave}
@@ -899,12 +914,9 @@ function Esperienza() {
                             >
                                 {t.experienceRestart}
                             </button>
-
                         </div>
-
                     </div>
                 )}
-
             </div>
         </section>
     )
@@ -936,11 +948,11 @@ function RecommendationCard({ title, item }) {
 
 function getCigarText(language) {
     const texts = {
-        MK: 'Заокружете ја вечерта со момент за пура. Конкретна селекција на пури не е наведена во доставената карта, па изборот се остава на персоналот на ресторанот.',
-        EN: 'Complete the evening with a cigar moment. A specific cigar selection is not listed in the provided menu, so the final choice is left to the restaurant team.',
-        IT: 'Completa la serata con un momento dedicato al sigaro. Una selezione specifica non è indicata nella carta fornita, quindi la scelta finale viene lasciata al personale.',
-        FR: 'Terminez la soirée avec un moment cigare. Une sélection précise ne figure pas dans la carte fournie, le choix final est donc laissé à l’équipe du restaurant.',
-        DE: 'Beenden Sie den Abend mit einem Zigarrenmoment. Eine konkrete Auswahl ist in der bereitgestellten Karte nicht aufgeführt, daher bleibt die endgültige Wahl dem Restaurantteam überlassen.',
+        MK: 'Заокружете ја вечерта со момент за пура. Конкретна селекција на пури не е наведена во менито, па изборот е оставен на персоналот на ресторанот.',
+        EN: 'Complete the evening with a cigar moment. A specific cigar selection is not listed in the menu, so the final choice is left to the restaurant team.',
+        IT: 'Completa la serata con un momento dedicato al sigaro. Una selezione specifica non è indicata nel menu, quindi la scelta finale viene lasciata al personale.',
+        FR: 'Terminez la soirée avec un moment cigare. Une sélection précise ne figure pas au menu, le choix final est donc laissé à l’équipe du restaurant.',
+        DE: 'Beenden Sie den Abend mit einem Zigarrenmoment. Eine konkrete Auswahl ist nicht im Menü aufgeführt, daher bleibt die endgültige Wahl dem Restaurantteam überlassen.',
     }
 
     return texts[language] || texts.EN
