@@ -1,7 +1,7 @@
 import MenuGallery from './MenuGallery'
 import { drinkImages } from '../../data/menuImages'
 import fixedMenuImage from '../../assets/Screenshot 2026-09-17 122018.png'
-import { drinksMenu, drinksInformation } from '../../data/drinksData'
+import { drinksMenu, drinksInformation } from '../../data/DrinksData.jsx'
 
 function DrinksMenuPage() {
     return (
